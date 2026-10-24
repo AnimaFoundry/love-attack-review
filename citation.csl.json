@@ -1,0 +1,35 @@
+[
+  {
+    "id": "AnimaFoundry2026CompassionFraming",
+    "type": "article",
+    "title": "Compassion and Legitimacy Framing in LLM Systems: Evidence, Threat Boundaries, and a Controlled Evaluation Protocol",
+    "author": [
+      {
+        "literal": "AnimaFoundry"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ]
+    },
+    "version": "1.0.0",
+    "status": "preprint",
+    "genre": "Critical integrative review and prospective evaluation protocol",
+    "URL": "https://github.com/AnimaFoundry/love-attack-review/blob/v1.0.0/paper.md",
+    "language": "en",
+    "note": "Critical integrative review and prospective evaluation protocol; not peer reviewed. No original controlled model experiment, power analysis, or defense-effectiveness evaluation is reported. Article license: CC-BY-4.0.",
+    "custom": {
+      "license": "CC-BY-4.0",
+      "peer_reviewed": false,
+      "original_controlled_model_experiments": false,
+      "power_analysis_performed": false,
+      "defense_effectiveness_evaluated": false,
+      "publication_software_version": "1.0.0"
+    }
+  }
+]

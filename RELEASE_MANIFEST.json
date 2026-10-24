@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "scope": "Public research review and prospective protocol; no private transcript or empirical model results.",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 32,
+      "sha256": "3131783d82f971e1a661deab7c0888410a6cdf225968b5a0989816e70a1878c6"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "bytes": 851,
+      "sha256": "af5c2fc851dbcdb203625716fe430d2f08bfb1853bc3d85080294a2d00233b3f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 48,
+      "sha256": "baf8abd788c34d6c312c23e328f81fd21f7cac950b4998cfb1f2d2269539f477"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1451,
+      "sha256": "b1cd99241b1d2090fc57f7680a12b1c6e9ee8935ab6742d1aba3afc60fcee493"
+    },
+    {
+      "path": "EXPERIMENT_HANDOFF.md",
+      "bytes": 8845,
+      "sha256": "83a5bab1443742d9e9da350311daa5982752274a88ec02813a6508a8273b3ec9"
+    },
+    {
+      "path": "FONT-LICENSE.txt",
+      "bytes": 5954,
+      "sha256": "3361d054759a2fc686a2c058be82deaf9c2e6fe549be9004d7935a6c1736315d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 548,
+      "sha256": "4d46a48f452695ee8086a1db35f28140d20730f7d18c4c0b6fe08968349555cc"
+    },
+    {
+      "path": "LICENSE-CODE",
+      "bytes": 1069,
+      "sha256": "0644b7ecec046510e754f10c2531e229d395a6ce1d35013ba76bbd80adf212d2"
+    },
+    {
+      "path": "LICENSE-TEXT",
+      "bytes": 18616,
+      "sha256": "6dac255b5ac86c1ab76998594d5976eec94c70c7acce17e5294818aa5f22565c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3914,
+      "sha256": "193aee5294d14415ee420acdfea606710922378e60c90a3027d3c21f2547027e"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "bytes": 685,
+      "sha256": "816aea7c659bee48e3d38bdda09b8a38db2301474fce540096d50ec72555e3c2"
+    },
+    {
+      "path": "SOURCE_AND_RIGHTS.md",
+      "bytes": 2591,
+      "sha256": "e8c2f53e8c8ca5553197f865aba1faffb592f83a7bc02dad5f6c5ee8112f3394"
+    },
+    {
+      "path": "citation.bib",
+      "bytes": 606,
+      "sha256": "81842d07df93a8dc9cac64c659f6028ff875c1d066b3ad10bb379fadb23a4bd7"
+    },
+    {
+      "path": "citation.csl.json",
+      "bytes": 1145,
+      "sha256": "c2ec0c9b10426df70a01431a7141039bc0493b54771d3fb07bcee1cb5a3f17eb"
+    },
+    {
+      "path": "figures/framing_evaluation.svg",
+      "bytes": 2760,
+      "sha256": "dc08c73dd467711a9b81494b792db9c6601b0507ef2ab6c48ec7bfec2fa1e9f8"
+    },
+    {
+      "path": "manuscript.md",
+      "bytes": 34082,
+      "sha256": "60f20e574140a60c8195aa80fce0da38d9d7f2a52316e7ede3b082c737279bda"
+    },
+    {
+      "path": "paper.md",
+      "bytes": 39642,
+      "sha256": "a012c8c2b7f29a4672fcc1cedd0979f72ee42aeb08d479df269851d3fac5d77b"
+    },
+    {
+      "path": "paper.pdf",
+      "bytes": 111343,
+      "sha256": "b308b316a13a570acd2692c0a8f95b746ad63f74a704eb829b81e41e8364a3c9"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 19368,
+      "sha256": "8fd58f2acd8a60e90d83d7cc3781a907d63b4e1c4c71feb7cc74a668d4d9ed60"
+    },
+    {
+      "path": "references.json",
+      "bytes": 19026,
+      "sha256": "1b56f5e9bcf404f10d9ff80e403a2dc776b9d4774dfba7336ee6923d8cc9be6b"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 64,
+      "sha256": "f9f0acb3de30711513fe7276c6f1dfe3cb160f93a0e1fc69f0a0d4dfe665e968"
+    },
+    {
+      "path": "schemas/CFF-LICENSE",
+      "bytes": 18688,
+      "sha256": "d26e56663498f0f17dbcb8a9bd50d344828948be08265f4fc97b4fc612e9be71"
+    },
+    {
+      "path": "schemas/CFF-SOURCE.md",
+      "bytes": 1703,
+      "sha256": "21a0caa9ad07293fd3695cc1005be127560f9e256204d40b68ab4db2a392a26d"
+    },
+    {
+      "path": "schemas/cff-1.2.0.schema.json",
+      "bytes": 63762,
+      "sha256": "17bc7993c67b95eec988dadca78b65cb29cd489d1fceba71040a141dfb9791df"
+    },
+    {
+      "path": "scripts/build_paper.py",
+      "bytes": 15717,
+      "sha256": "f0cf682d94a426c8f323d214be731131335cfe2728d34b93c14d52f2724a4b30"
+    },
+    {
+      "path": "scripts/verify_artifacts.py",
+      "bytes": 19304,
+      "sha256": "c3e90e6bd36d78f700dc97c0bdfc74f6c821b548359a7498133a7141cde11022"
+    },
+    {
+      "path": "scripts/verify_metadata.py",
+      "bytes": 8248,
+      "sha256": "af58c6b14276553dd5ee80b164b46904e9e9e9e4b6bf6a523f7cb17a273e88e5"
+    },
+    {
+      "path": "tests/test_artifacts.py",
+      "bytes": 10261,
+      "sha256": "9f7a1b68bdfaf0e99c7c5742a1cef00af1170a5a3d04e8f2125359dd2e973dbb"
+    },
+    {
+      "path": "tests/test_metadata.py",
+      "bytes": 4969,
+      "sha256": "b66719f45ef7a300461a17982e9dcf3fc876a98915f7405c700c4aebd3ba8299"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "title": "Prospective protocol for benign framing and task-contract robustness",
+  "status": "NOT_PERFORMED",
+  "preregistered": false,
+  "prompts_frozen": false,
+  "sample_size": null,
+  "power_analysis_status": "NOT_PERFORMED",
+  "evidence_boundary": "This is a research handoff, not a preregistration, runnable benchmark, completed model study, or demonstrated attack mechanism. All experiments below are proposed. No empirical success rate, effect size, power, model ranking, or defense efficacy is reported.",
+  "global_rules": {
+    "inputs_and_rights": [
+      "Author original synthetic tasks and framing variants with provenance and release permission; exclude private records and copied restricted benchmark prompts.",
+      "Use only an inference endpoint whose use is permitted for the planned study; separately verify model, dataset, and service terms. Publishing this protocol does not assert authorization for paid or third-party testing.",
+      "Do not redistribute third-party weights, transcripts, papers, or datasets merely because they are readable. Preserve exact raw and separately normalized local research text."
+    ],
+    "execution_boundary": [
+      "No model execution is part of this release. No executable attack stimuli or runner is supplied by this protocol.",
+      "Future studies use benign contract-preserving requests; no jailbreak, rule-override, self-replication, persistence payload, external-action, or resource-exhaustion requests.",
+      "Primary studies disable tools and writable memory. Any later action study uses isolated local mocks with explicit allowed transitions."
+    ],
+    "resource_controls": {
+      "global_attempt_cap": null,
+      "output_token_cap": null,
+      "wall_time_cap": null,
+      "monetary_budget": null,
+      "caps_frozen": false,
+      "accounting_rule": "Before execution, set finite global request-attempt, output, time, and cost ceilings. The request-attempt ceiling covers all phases, models, replicas, retries, screenings, auxiliary judges, and recovery calls, including failed or uncertain attempts; workers must share it. Do not count only successful responses or reset the ceiling per retry.",
+      "comparability_rule": "Compare conditions within a model under the same version, inference settings, task facts, output contract, available actions, and total per-case resource ceilings. Count defense overhead inside the same ceilings and report its actual use. Match input lengths per tokenizer where feasible and disclose residual imbalance; do not claim exact cross-tokenizer matching.",
+      "exhaustion_rule": "Stop at a ceiling. Mark uninitiated scheduled cases NOT_ATTEMPTED and report the incomplete cohort; do not replace them selectively or enlarge the budget after seeing outcomes."
+    },
+    "sampling_and_inference": [
+      "Independently authored task/template origins define clusters; near-duplicate instances and repeated stochastic generations are nested observations, not independent tasks. Account for crossed template dependence when present.",
+      "Split development and evaluation by task/template origin. Do not use pilot or reviewed evaluation outcomes to optimize confirmatory prompts, thresholds, or model selection.",
+      "Randomize and balance condition order within task and collection-time blocks. Primary trials use fresh contexts; report model revisions and start a new cohort or stop if a revision changes.",
+      "Declare cluster/instance weights, primary endpoint, contrasts, multiplicity, and cluster-aware uncertainty before confirmation. Report per-model effects; a selected panel does not represent all models.",
+      "Pilot feasibility and clustered power or precision planning remain unperformed. Choose useful-effect and equivalence margins before confirmatory outcomes; statistical nonsignificance alone is not evidence of no meaningful effect."
+    ],
+    "outcome_accounting": {
+      "primary_endpoint": "Bounded task non-success per initiated evaluation case: a case succeeds only if it satisfies the fixed task contract under the resource policy.",
+      "case_denominator": "All initiated cases remain counted, including refusal, empty return, truncation, timeout, transport/API error, and exhausted permitted recovery. Their causes remain separately labeled; transport errors are not model disobedience.",
+      "attempt_denominator": "Report every attempted call, including failed and uncertain calls, with a parent case ID and retry/recovery role. Retries add attempts but do not add independent evaluation cases.",
+      "behavior_diagnostic": "Contract violations among returned model responses retain refusals, empty messages, and truncated responses, scored against the contract with separate flags. No-output transport failures have unobserved model behavior. Report response availability and missing-outcome sensitivity bounds; do not call this selected subset the full causal effect.",
+      "first_attempt_and_recovery": "Retain first-attempt outcomes and final bounded-policy outcomes separately. Recovery never overwrites an initial failure; define eligible transport retries before collection.",
+      "truncation_and_empty": "Repetition metrics describe observed text only. A truncated prefix does not establish its unseen continuation; empty output has undefined normalized repetition coverage, not a successful zero-repetition score.",
+      "usage": "Separate input tokens, visible output tokens, other reported billable tokens, grapheme length, bytes, and wall time. Missing usage is unknown rather than zero. A zero or missing baseline denominator makes a ratio undefined; report differences and availability instead.",
+      "ledger": "Retain scheduled-case and linked-attempt identifiers, conditions, source/split, model/settings hashes, initiation status, finish reason, response flags, scorer result, observed usage, retry role, and missingness reason."
+    },
+    "release_interpretation": [
+      "A positive behavioral contrast would apply to the tested intervention and task distribution; it would not identify internal priority reordering or establish a novel attack class.",
+      "Repetition is a textual pattern, not automatically a contract violation, harmfulness, or server denial of service.",
+      "Negative and inconclusive results must be retained. Confirmatory claims require a separately frozen plan and completed authorized evaluation."
+    ]
+  },
+  "experiments": [
+    {
+      "id": "BF-01",
+      "title": "Semantic compassion and normative framing without repeated-symbol cues",
+      "status": "NOT_PERFORMED",
+      "question": "Does benign compassion framing change bounded task non-success when task facts, authorization, output requirements, and repeated-symbol exposure are held fixed?",
+      "inputs": [
+        "Original synthetic extraction, classification, or arithmetic tasks with deterministic correct answers and explicit contracts.",
+        "A 2x2 design: compassion present/absent crossed with normative framing present/absent; every condition has two fixed-position framing slots with matched neutral alternatives.",
+        "The semantic framing contains no emoji run, decorative repeated symbol, repetition instruction, or instruction to change the answer. Warmth is permitted only where the unchanged contract permits it.",
+        "A separate unaugmented task-only baseline and neutral-length diagnostic."
+      ],
+      "rights": "Original synthetic inputs only; endpoint and release rights must be checked under global_rules.inputs_and_rights before collection.",
+      "baselines": [
+        "The complete unchanged task with two neutral matched framing slots.",
+        "The task-only prompt, reported separately from the matched neutral control.",
+        "Within-model fixed decoding and deterministic contract scoring; generic added-text effects assessed by the neutral-length diagnostic."
+      ],
+      "resource_controls": "Apply identical per-case ceilings and the shared global attempt cap. Match syntactic function and approximate per-model length without changing semantics; report remaining differences.",
+      "independent_units": "Independently authored task/template clusters; instances and repeated draws nested within clusters. Hold out entire origins and report model versions separately.",
+      "outcomes": {
+        "primary": "Compassion main effect on the initiated-case bounded non-success endpoint.",
+        "estimand": "For fixed model m and prespecified cluster-weighted risks p_m(c,l), Delta_C=0.5*((p_m(1,0)-p_m(0,0))+(p_m(1,1)-p_m(0,1))).",
+        "secondary": [
+          "Normative main effect: Delta_L=0.5*((p_m(0,1)-p_m(0,0))+(p_m(1,1)-p_m(1,0))).",
+          "Risk-difference interaction: p_m(1,1)-p_m(1,0)-p_m(0,1)+p_m(0,0).",
+          "Response-conditional contract violations, refusal/truncation/availability, output-token differences, and separately specified grapheme/token repetition metrics."
+        ],
+        "negative_controls": [
+          "Legitimate warmth with unchanged correctness and format requirements.",
+          "Matched neutral added text and neutral-length variation.",
+          "Valid repeated data, empty responses, truncation, and transport failures in scorer fixtures; fixtures are not model results."
+        ]
+      },
+      "go_no_go": {
+        "go_to_pilot": "Proceed only after item review confirms equal answers, authorization and contracts; scoring is validated; rights, model settings and finite budget are fixed.",
+        "go_to_confirmation": "Proceed only after a separate feasibility pilot supports a justified cluster-aware precision/power plan and prompts, splits, margins, scoring, multiplicity and missingness rules are frozen before new outcomes.",
+        "no_go": "Stop for semantic mismatch, unreliable scoring, unresolved rights, insufficient resources for informative inference, model revision changes, or any external action outside scope."
+      },
+      "interpretation": "A signed framing contrast may indicate worse or better adherence. Nonsignificance is inconclusive unless prespecified equivalence is supported; neither direction proves a novel attack or internal mechanism.",
+      "unresolved": ["Model IDs", "Task/template counts and repetitions", "Prompt text and split", "Power/precision plan", "Useful-effect and equivalence margins", "Caps and costs", "Scoring and missingness tolerances"]
+    },
+    {
+      "id": "BF-02",
+      "title": "Separate bounded repeated-symbol cue control",
+      "status": "NOT_PERFORMED",
+      "question": "Can surface cue exposure or generic repetition priming account for an apparent framing-associated repetition effect?",
+      "inputs": [
+        "A new held-out set preserving BF-01 task contracts.",
+        "Compare semantic framing without symbols against a separately controlled short symbol cue, with neutral-symbol and length-matched nonrepeating alternatives.",
+        "Cross semantic compassion presence with cue repetition where feasible; treat affective versus neutral symbol identity as a separate matched comparison rather than equating symbol identity with compassion.",
+        "The input cue is inert quoted data, strictly bounded before collection, and never asks the model to repeat, continue, copy, or propagate it. No cue strings are supplied here."
+      ],
+      "rights": "Use original synthetic text and Unicode text symbols; no third-party artwork, protected prompt sets, or private transcripts are included.",
+      "baselines": ["Semantic compassion with no repeated symbols", "Neutral framing with the same bounded surface cue", "Matched neutral symbols", "Length-matched nonrepeating text"],
+      "resource_controls": "Freeze small cue lengths and symbol identities during development; equalize per-model input budgets where feasible, retain identical output caps, and count all attempts under the shared ceiling. Do not increase cue repetitions in response to failures.",
+      "independent_units": "Independent task/template origins, with cue variants and stochastic draws nested; no recycling BF-01 evaluation outcomes to choose effective symbols.",
+      "outcomes": {
+        "primary": "Prespecified contrast separating semantic framing from surface repetition under the same task contract; exact statistical hierarchy remains to be frozen.",
+        "secondary": ["Initiated-case task non-success", "Observed grapheme repetition coverage with exact segmentation and interval rules", "Per-model token repetition and output length", "Input-copy overlap, refusal and truncation flags"],
+        "negative_controls": ["Correctly quoted repeated data", "Legitimate repeated array values", "Affectively neutral symbol cues", "Nonrepeating text of comparable length"]
+      },
+      "go_no_go": {
+        "go_to_pilot": "Proceed only if cue identity, repetition, position, length, and semantic framing can be separated without changing the answer or inducing a request to repeat.",
+        "go_to_confirmation": "Freeze new cue definitions, splits and analysis after development, using untouched evaluation origins.",
+        "no_go": "Stop if semantic and surface cues cannot be meaningfully separated, cue text changes authorization, or the design requires escalating repetition or output budgets."
+      },
+      "interpretation": "A symbol-cue effect would support a surface-priming explanation in that design; it would not validate compassion as the cause. BF-01 and BF-02 are separate studies with separately qualified conclusions.",
+      "unresolved": ["Cue identities, sizes and placement", "Length-matching strategy", "Exact contrasts and multiplicity", "Sample and power plan", "Repetition metric parameters and implementation pin"]
+    },
+    {
+      "id": "BF-03",
+      "title": "Utility-preserving defense evaluation",
+      "status": "NOT_PERFORMED",
+      "question": "Does an external validation or recovery policy reduce delivered contract violations while preserving legitimate task utility under the same total resource ceiling?",
+      "inputs": ["New held-out benign tasks and framing variants", "Valid warm requests", "Unambiguous authorized corrections", "Local synthetic mock state only if a tool extension is separately specified"],
+      "rights": "Use original synthetic items and properly licensed local components; any auxiliary model endpoint requires its own permitted-use check.",
+      "baselines": ["Undefended model with the same external hard budget", "Deterministic schema validation", "Budget-only control", "Reject-all low-utility reference", "Individual defense components before a combined stack"],
+      "resource_controls": "Give each system the same total request, token, time and action ceilings; screening, judges, retries and recovery consume those ceilings. Report actual overhead and outcomes before and after intervention.",
+      "independent_units": "Independent held-out task/template clusters; whole mock episodes are units for action evaluation, with repeated draws nested.",
+      "outcomes": {
+        "primary": "Joint prespecified decision criterion: lower delivered violations and retained task utility within a justified utility-loss margin.",
+        "secondary": ["Correct task completion", "False rejection of valid warmth", "Acceptance of authorized corrections", "First-attempt versus recovered success", "Actual total usage and latency", "Attempted versus executed mock transitions"],
+        "negative_controls": ["Valid answers with repeated structure", "Permitted empathy", "Legitimate corrections that should be accepted", "Empty or truncated invalid responses"]
+      },
+      "go_no_go": {
+        "go_to_pilot": "Proceed only when a useful baseline and external task scorer exist and defense overhead fits the shared ceilings.",
+        "go_to_confirmation": "Freeze utility margins, decision rules, thresholds and component ablations on separate development data.",
+        "no_go": "Reject a defense claim based only on refusing everything, hidden extra calls, excluded failures, or improved final formatting misrepresented as improved raw-model adherence."
+      },
+      "interpretation": "A filter may improve delivered output without changing the model. Any efficacy claim requires measured utility and full resource accounting; no efficacy has been demonstrated here.",
+      "unresolved": ["Defense components and versions", "Utility-loss margin", "Detection thresholds", "Budget allocation", "Sample and power plan"]
+    },
+    {
+      "id": "BF-04",
+      "title": "Randomized-history carryover with fresh-context controls",
+      "status": "NOT_PERFORMED",
+      "question": "Does a benign prior framing exposure alter the response to a later fixed target task when that exposure is absent from the target request?",
+      "inputs": ["Matched benign neutral-history and framing-history sequences", "Identical subsequent target task", "Retained-transcript and fresh-transcript/no-memory conditions", "A separately specified, inspectable local toy-memory condition only if later justified"],
+      "rights": "Original synthetic histories and local synthetic state only; no user memory, private conversations, or third-party persistent systems.",
+      "baselines": ["Neutral prior history of matched difficulty, turn count and approximate length", "Fresh context with no retained transcript or memory", "An explicit memory-disabled control if a toy-memory arm is added"],
+      "resource_controls": "Charge prior histories and the target response to equal episode ceilings and the shared global cap. Keep target position, scoring and output limits fixed; inspect only declared local state.",
+      "independent_units": "Independently authored whole conversation sequences clustered by task/template origin; individual turns are not independent repetitions.",
+      "outcomes": {
+        "primary": "Target-task non-success contrast between randomized matched histories, separately by transcript-retention condition.",
+        "secondary": ["Response availability and termination flags", "Observed state retention", "Task correctness and bounded output repetition", "Episode-wide usage and latency"],
+        "negative_controls": ["Fresh transcript with no memory", "Matched neutral history", "State reset verified before each independent sequence"]
+      },
+      "go_no_go": {
+        "go_to_pilot": "Proceed only when histories can be matched, the target is unchanged, and session/state reset is observable and controllable.",
+        "go_to_confirmation": "Freeze sequence design, target position, state channels, contrasts and uncertainty analysis before collecting held-out sequences.",
+        "no_go": "Stop if unexplained cross-session state or provider revision drift makes the randomized-history contrast uninterpretable. Do not introduce hidden persistence or cross-agent transmission mechanisms."
+      },
+      "interpretation": "A retained-transcript effect is causal context carryover under the randomized design, not weight modification or a persistent backdoor. Any toy-memory result is limited to its explicit storage channel; it implies no self-propagation.",
+      "unresolved": ["History templates and lengths", "Session isolation evidence", "Whether a toy-memory arm is warranted", "Exact contrasts", "Sample and power plan"]
+    }
+  ]
+}

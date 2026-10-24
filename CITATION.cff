@@ -1,0 +1,30 @@
+cff-version: "1.2.0"
+message: "Please cite the review preprint in preferred-citation. The root entry describes publication helper code."
+type: software
+title: "Compassion and Legitimacy Framing Review: Publication Software"
+authors:
+  - name: "AnimaFoundry"
+version: "1.0.0"
+date-released: "2026-10-24"
+repository-code: "https://github.com/AnimaFoundry/love-attack-review"
+url: "https://github.com/AnimaFoundry/love-attack-review/releases/tag/v1.0.0"
+license: MIT
+abstract: "Publication helper code for a critical integrative review and prospective evaluation protocol. The article is licensed CC-BY-4.0; original helper code is MIT; the vendored CFF schema retains CC-BY-4.0. No original controlled model experiment is reported."
+keywords:
+  - language models
+  - persuasion
+  - prompt injection
+  - task adherence
+  - research protocol
+preferred-citation:
+  type: article
+  title: "Compassion and Legitimacy Framing in LLM Systems: Evidence, Threat Boundaries, and a Controlled Evaluation Protocol"
+  authors:
+    - name: "AnimaFoundry"
+  year: 2026
+  version: "1.0.0"
+  date-released: "2026-10-24"
+  status: preprint
+  license: CC-BY-4.0
+  url: "https://github.com/AnimaFoundry/love-attack-review/blob/v1.0.0/paper.md"
+  notes: "Critical integrative review and prospective evaluation protocol; not peer reviewed. No original controlled model experiment, power analysis, or defense-effectiveness evaluation is reported. Article license: CC-BY-4.0."
