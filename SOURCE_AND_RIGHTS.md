@@ -1,6 +1,6 @@
 # Source and rights ledger
 
-Companion package 1.1.0 · Manuscript 1.0.0 · 24 October 2026
+Companion package 1.2.0 · Manuscript 1.0.0 · 24 October 2026
 
 | Material | Origin | License / publication boundary |
 |---|---|---|
@@ -31,6 +31,19 @@ The 13-file pre-inference freeze covers the synthetic task set, design, schedule
 Only original synthetic inputs are used. No individual conversation case, screenshot, private transcript, external customer record or third-party benchmark is included. Model output is preserved as output, not attributed to a human participant or promoted to independently verified truth. The package's CC BY 4.0 license covers the project's original text and data compilation; it does not relicense the model or assert rights over any third-party material a model might produce. Reuse must retain applicable notices and source attribution. Actual observations and exclusions belong to [the pilot report](pilot/bf01/REPORT.md).
 
 ## Scope of legal and evidence statements
+
+BF-01B adds newly authored synthetic source encodings, competing supplemental
+requests and an original four-lane validator/analysis implementation. The runner,
+budget ledger and associated tests are adapted from this repository's retained
+MIT BF-01 code; attribution is kept in the new files. Original text/data remain
+CC BY 4.0 and original code MIT. The same Apache-2.0 model template/license are
+retained with the exact local metadata; no new model or weights are redistributed.
+Sixteen source/design/license/review files are frozen before BF-01B collection.
+Its raw synthetic responses and summaries are separate evidence. Generic rapport
+and normative appeals are authored afresh; no private transcript, private-derived
+numbers, unique story or private source link is used. No third-party attack
+prompt dataset was copied. The fixed ordinary parsing/schema baselines are not
+claimed to be a novel invention, proven defense or patent-cleared implementation.
 
 This is a literature-and-protocol package with a separately identified developmental feasibility companion, not a claim of an original attack invention or a clearance opinion. No file-specific source dispute has been identified in the materials included here. That is not an exhaustive patent search or a freedom-to-operate conclusion. Any future implementation or imported dataset needs a new feature- and artifact-specific review. An applicable license may provide specific grants under its own terms; it does not establish clearance against unrelated third-party patents.
 

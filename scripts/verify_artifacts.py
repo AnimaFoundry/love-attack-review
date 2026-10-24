@@ -114,7 +114,7 @@ def public_inventory(root):
 
 def validate_manifest(root, manifest):
     require(isinstance(manifest, dict), "Manifest must be an object")
-    require(manifest.get("version") == "1.1.0", "Unexpected publication version")
+    require(manifest.get("version") == "1.2.0", "Unexpected publication version")
     require(manifest.get("self_excluded") is True, "Manifest must explicitly exclude itself")
     require(nonempty(manifest.get("scope")), "Manifest requires a truthful scope description")
     records = manifest.get("files")
@@ -376,7 +376,7 @@ def verify(root=ROOT, rebuild=None):
         compare_rebuild(root, rebuild)
     return {"manifest_files": count, "references": len(refs), "pdf_pages": pages,
             "prospective_studies": experiments, "article_v1_model_experiments_performed": False,
-            "pilot_companion_checked_separately": "pilot/bf01/analyze.py --check",
+            "pilot_companions_checked_separately": ["pilot/bf01/analyze.py --check", "pilot/bf01b/analyze.py --check"],
             "rebuild_byte_identical": rebuild is not None,
             "remote_urls_checked": False, "scientific_claim_validation": False}
 

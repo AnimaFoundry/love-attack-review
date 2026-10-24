@@ -24,7 +24,7 @@ class CitationMetadataTests(unittest.TestCase):
     def test_real_exports_and_official_schema_pass(self):
         result = metadata.verify(ROOT)
         self.assertEqual(result["article_version"], "1.0.0")
-        self.assertEqual(result["software_version"], "1.1.0")
+        self.assertEqual(result["software_version"], "1.2.0")
         self.assertFalse(result["scientific_claim_validation"])
 
     def test_article_rejected_at_cff_root_by_official_schema(self):
@@ -38,7 +38,7 @@ class CitationMetadataTests(unittest.TestCase):
         metadata.validate_cff(self.cff, self.schema)
 
     def test_article_metadata_mismatch_rejected(self):
-        for key, value in (("version", "1.1.0"), ("title", "Another title"),
+        for key, value in (("version", "1.2.0"), ("title", "Another title"),
                            ("date-released", "2026-10-16"),
                            ("url", "https://example.com/unrelated")):
             with self.subTest(key=key):
@@ -74,7 +74,7 @@ class CitationMetadataTests(unittest.TestCase):
 
     def test_csl_author_version_and_experiment_boundary_required(self):
         for key, value in (("author", [{"family": "AnimaFoundry"}]),
-                           ("version", "1.1.0"), ("status", "published"),
+                           ("version", "1.2.0"), ("status", "published"),
                            ("custom", {})):
             with self.subTest(key=key):
                 invalid = deepcopy(self.csl)
@@ -85,7 +85,7 @@ class CitationMetadataTests(unittest.TestCase):
     def test_bibtex_mismatch_rejected(self):
         valid = (ROOT / "citation.bib").read_text(encoding="utf-8")
         metadata.validate_bibtex(valid)
-        for invalid in (valid.replace("version 1.0.0", "version 1.1.0"),
+        for invalid in (valid.replace("version 1.0.0", "version 1.2.0"),
                         valid.replace("not peer reviewed", "peer reviewed"),
                         valid.replace("AnimaFoundry}}", "Someone Else}}")):
             with self.assertRaises(ValueError):

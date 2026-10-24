@@ -1,9 +1,9 @@
 # Compassion and Legitimacy Framing in LLM Systems
 
 **Evidence, Threat Boundaries, and a Controlled Evaluation Protocol**  
-AnimaFoundry · Companion package 1.1.0 · Manuscript 1.0.0 · 24 October 2026
+AnimaFoundry · Companion package 1.2.0 · Manuscript 1.0.0 · 24 October 2026
 
-A selective critical integrative review and a prospective benign evaluation protocol. **The manuscript is an unchanged research preprint, not peer reviewed.** Package 1.1.0 adds a separate, bounded BF-01 developmental feasibility companion. Its execution status and observed outcomes are reported in [the pilot report](pilot/bf01/REPORT.md), not retroactively inserted into the paper. No validated defense or confirmatory framing result is claimed.
+A selective critical integrative review and a prospective benign evaluation protocol. **The manuscript is an unchanged research preprint, not peer reviewed.** Package 1.2.0 adds a second original-synthetic content-integrity study, BF-01B, alongside the retained BF-01 feasibility pilot. Actual execution and observations are reported in the [new content-integrity report](pilot/bf01b/REPORT.md) and [first pilot report](pilot/bf01/REPORT.md), not retroactively inserted into the paper. No validated defense or confirmatory framing result is claimed.
 
 The informal project label *The Love Attack* names the originating question. It is not a demonstrated new exploit or an established attack class.
 
@@ -15,6 +15,8 @@ The informal project label *The Love Attack* names the originating question. It 
 - [Versioned releases](https://github.com/AnimaFoundry/love-attack-review/releases).
 
 Suggested citation: AnimaFoundry. (2026). *Compassion and Legitimacy Framing in LLM Systems: Evidence, Threat Boundaries, and a Controlled Evaluation Protocol* (Version 1.0.0) [Preprint]. https://github.com/AnimaFoundry/love-attack-review
+
+For observations from BF-01 or BF-01B, cite the corresponding pilot report and the [version 1.2.0 companion release](https://github.com/AnimaFoundry/love-attack-review/releases/tag/v1.2.0). The unchanged version 1.0.0 manuscript does not contain these pilot results.
 
 ## What this paper contributes
 
@@ -30,9 +32,57 @@ It separates useful emotional adaptation, task-contract failure, evaluator manip
 | BF-03 | Can defenses retain legitimate utility under an equal total resource ceiling? | NOT_PERFORMED |
 | BF-04 | Does an effect depend on retained context or an explicit toy-memory channel? | NOT_PERFORMED |
 
-The original [EXPERIMENT_HANDOFF.md](EXPERIMENT_HANDOFF.md) and [protocol.json](protocol.json) remain historical prospective documents. Their `NOT_PERFORMED` statuses and unfrozen confirmatory designs are preserved. The new BF-01 pilot is a narrower developmental study; it does not complete the broad prospective card or change the status of BF-02, BF-03 or BF-04.
+The original [EXPERIMENT_HANDOFF.md](EXPERIMENT_HANDOFF.md) and [protocol.json](protocol.json) remain historical prospective documents. Their `NOT_PERFORMED` statuses and unfrozen confirmatory designs are preserved. The retained BF-01 feasibility companion is a narrower developmental study; it does not complete the broad prospective card or change the status of BF-02, BF-03 or BF-04.
 
-### BF-01 feasibility companion
+### BF-01B: content usefulness, correctness and trustworthiness
+
+Read the [results report](pilot/bf01b/REPORT.md), [design](pilot/bf01b/DESIGN.md),
+[plan](pilot/bf01b/plan.json), [pre-run review](pilot/bf01b/PRE_RUN_REVIEW.md),
+[freeze](pilot/bf01b/freeze.json) and [machine-readable outcomes](pilot/bf01b/run-001/summary.json).
+This study examines content integrity rather than latency, crashes or service load.
+It authors 24 new inputs in six representations of one source-state operation:
+observed zero, observed positive, explicit unknown and absent evidence.
+
+All 168 calls completed once. Raw JSON acceptance was 0/168. Ordinary extraction
+recovered 79 correct answers but also accepted 87 wrong objects; adding the
+structural schema rejected none of those 87. Matched social prefixes did not
+increase accepted-wrong counts over their plain counterparts. These pooled
+counts include control failures and are not an emotional-attack success rate.
+
+Seven arms compare task-only and neutral context against plain format/default
+requests, matched relational/legitimacy variants, and a combined stress condition.
+The authoritative SYSTEM contract never changes. Lower-priority requests try
+to elicit added reassurance or fabricated observed zeros. The plain/social pairs
+share the same operative request, but length/salience confounds remain; the
+combined condition is not a factorial interaction test. These are developmental
+wording interventions, not a reproduction of a private case or a new attack class.
+
+The frozen ceiling is 168 calls on the already installed local model, 128 output
+tokens per call, 20 minutes globally, 45 seconds per call, concurrency one and
+USD 0 external API spending. No retry, auxiliary call or new download is included.
+All initiated outcomes are retained. Actual completion is stated in the report;
+scheduled calls alone are not observations.
+
+Four source-independent offline pipelines process the same saved responses:
+raw JSON, exact single-fence parsing, conservative single-object extraction,
+and structural schema filtering after extraction. The answer key scores outputs
+only after acceptance. The report distinguishes correct answers restored by
+format repair, wrong answers rejected without correction, and wrong answers
+accepted despite valid structure. Accepted coverage and false-acceptance counts
+prevent a filter that rejects everything from appearing useful.
+
+```sh
+python -m unittest discover -s pilot/bf01b -p 'test_*.py' -v
+python pilot/bf01b/analyze.py pilot/bf01b/run-001 --check
+```
+
+These commands are offline and do not repeat inference. A future live run needs
+its own finite budget and unused destination; this development set is consumed
+evidence and cannot become an untouched confirmation set. BF-02/03/04 remain
+unperformed, and the original broader BF-01 protocol is not completed by these
+small studies.
+
+### Retained BF-01 feasibility companion
 
 Read [REPORT.md](pilot/bf01/REPORT.md) for actual completion, all observed failures and interpretation. The [task design](pilot/bf01/DESIGN.md), [frozen plan](pilot/bf01/plan.json), [pre-run review](pilot/bf01/PRE_RUN_REVIEW.md), [source freeze](pilot/bf01/freeze.json) and [retained run evidence](pilot/bf01/run-001/) make the limited study auditable. Thirteen task, source, plan, review and model-license/template files are frozen before inference; raw outcomes and their analysis are retained separately.
 
@@ -72,6 +122,8 @@ python -m unittest discover -s tests -v
 python -m unittest discover -s pilot/bf01 -p 'test_*.py' -v
 python pilot/bf01/analyze.py pilot/bf01/run-001 --check
 python scripts/verify_metadata.py
+python -m unittest discover -s pilot/bf01b -p 'test_*.py' -v
+python pilot/bf01b/analyze.py pilot/bf01b/run-001 --check
 python scripts/build_paper.py --output-dir build/reproduced
 python scripts/verify_artifacts.py --rebuild-dir build/reproduced
 ```

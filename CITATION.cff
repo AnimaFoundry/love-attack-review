@@ -4,12 +4,12 @@ type: software
 title: "Compassion and Legitimacy Framing Review: Publication Software"
 authors:
   - name: "AnimaFoundry"
-version: "1.1.0"
+version: "1.2.0"
 date-released: "2026-10-24"
 repository-code: "https://github.com/AnimaFoundry/love-attack-review"
-url: "https://github.com/AnimaFoundry/love-attack-review/releases/tag/v1.1.0"
+url: "https://github.com/AnimaFoundry/love-attack-review/releases/tag/v1.2.0"
 license: MIT
-abstract: "Publication helper code and a bounded original-synthetic BF-01 feasibility companion. The unchanged v1.0.0 article is licensed CC-BY-4.0; original helper code is MIT; the vendored CFF schema retains CC-BY-4.0. See the separate pilot report for execution status and limited descriptive outcomes."
+abstract: "Publication helper code and original-synthetic BF-01/BF-01B developmental studies of framing, content integrity and ordinary output validation. The unchanged v1.0.0 article is licensed CC-BY-4.0; original helper code is MIT; the vendored CFF schema retains CC-BY-4.0. Separate reports preserve actual execution status, negative evidence and descriptive limits."
 keywords:
   - language models
   - persuasion

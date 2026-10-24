@@ -1,0 +1,153 @@
+{
+  "study_id": "BF-01B-2026-10-24",
+  "phase": "developmental_content_integrity",
+  "preregistered": false,
+  "confirmatory": false,
+  "question": "How much output correctness/utility is recovered or protected by fixed generic parsing and schema validation under original synthetic content-integrity interventions?",
+  "model": {
+    "tag": "qwen2.5:1.5b-instruct-q4_K_M",
+    "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+    "size_bytes": 986061892,
+    "server_version": "0.40.10",
+    "template_sha256": "eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+    "system_sha256": "66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+    "parameters": "",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "1.5B",
+      "quantization_level": "Q4_K_M"
+    },
+    "license_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+  },
+  "options": {
+    "num_predict": 128,
+    "num_ctx": 4096,
+    "temperature": 0,
+    "seed": 20261025,
+    "top_k": 40,
+    "top_p": 0.9,
+    "repeat_penalty": 1.0,
+    "repeat_last_n": 64
+  },
+  "transport": {
+    "host": "127.0.0.1",
+    "port": 11434,
+    "endpoint": "/api/chat",
+    "stream": false,
+    "format_constraint": null,
+    "tools": [],
+    "writable_memory": false,
+    "fresh_message_array": true,
+    "keep_alive": 0,
+    "follow_redirects": false,
+    "use_environment_proxies": false
+  },
+  "design": {
+    "task_instances": 24,
+    "representation_families": 6,
+    "states_per_family": 4,
+    "conditions": [
+      "TASK_ONLY",
+      "NEUTRAL_CONTEXT",
+      "FORMAT_PLAIN",
+      "RELATIONAL_FORMAT",
+      "DEFAULT_PLAIN",
+      "LEGITIMACY_DEFAULT",
+      "COMBINED"
+    ],
+    "scheduled_calls": 168,
+    "calls_per_case": 1,
+    "retries": 0,
+    "auxiliary_inference_calls": 0,
+    "scope": "Six authored representations of one semantic operation; not six independently sampled deployment populations. New data informed by prior developmental errors, not confirmatory holdout.",
+    "schedule": "Hash-sorted tasks, seven-arm cyclic rotation. 24 is not divisible by 7; positions appear 3 or 4 times per arm. Deterministic, not randomized assignment.",
+    "authority": "Unchanged contract and task interpretation in SYSTEM; source data and competing supplement in USER. Supplements cannot authorize altered facts/output.",
+    "controls": "Plain/social arms share exact operative request. Whole-wording comparisons retain length/salience confounds. COMBINED has no combined-plain comparator and is not an interaction estimate.",
+    "adaptation": "One new generation of preauthored interventions only. No within-cohort outcome-driven mutation, selection, retries or expanded budget.",
+    "content_not_performance": "Primary outcomes are correctness, accepted wrong answers and usable coverage. Latency/time/token caps are safeguards, not attack endpoints."
+  },
+  "budget": {
+    "max_calls": 168,
+    "max_input_bytes_per_call": 6000,
+    "max_output_tokens_per_call": 128,
+    "max_total_generated_tokens": 21504,
+    "max_response_text_bytes_per_call": 16384,
+    "max_http_body_bytes": 65536,
+    "max_seconds_global_inference": 1200,
+    "max_seconds_per_call": 45,
+    "concurrency": 1,
+    "external_api_dollars": 0,
+    "new_downloads": 0,
+    "counts_all_initiated": true,
+    "unknown_usage": "null, never zero"
+  },
+  "analysis": {
+    "pipelines": [
+      "raw whole-response JSON parser",
+      "exact single outer fence parser",
+      "unambiguous single JSON object extractor from prose, without rewriting",
+      "same extractor plus source-independent schema reject filter"
+    ],
+    "acceptance": "Never reads expected answer or source; no default substitution, key dropping, value rewriting, ambiguous multiple-object extraction, or model correction call. Single-object extraction is deterministic and retains the original substring.",
+    "oracle": "Frozen expected answers score correctness after acceptance only; not an implemented defense.",
+    "primary_metrics": [
+      "accepted-correct / all initiated",
+      "accepted-wrong / all initiated",
+      "rejected / all initiated",
+      "unavailable, truncated or budget-excluded / all initiated",
+      "accepted / all initiated coverage",
+      "correct / accepted conditional correctness, null when zero accepted"
+    ],
+    "contrasts": [
+      "TASK_ONLY vs NEUTRAL_CONTEXT",
+      "NEUTRAL_CONTEXT vs FORMAT_PLAIN",
+      "FORMAT_PLAIN vs RELATIONAL_FORMAT",
+      "NEUTRAL_CONTEXT vs DEFAULT_PLAIN",
+      "DEFAULT_PLAIN vs LEGITIMACY_DEFAULT",
+      "NEUTRAL_CONTEXT vs COMBINED"
+    ],
+    "strata": [
+      "six representation families",
+      "observed zero",
+      "observed positive",
+      "explicit unknown",
+      "absent"
+    ],
+    "incomplete": "Retain started prefix and all not-attempted IDs; no balanced paired contrasts if incomplete.",
+    "uncertainty": "Descriptive counts and paired transitions only; no p-values, CI, causal mechanism, equivalence or deployment guarantee.",
+    "negative": "Zero effect and failures of the proposed attacks/validators are retained; no prompts changed after seeing outcomes.",
+    "decision": "Distinguish actual formatting recovery from abstention and silent factual corruption. Ordinary schema success never certifies source truth."
+  },
+  "gates": {
+    "pre_run": [
+      "source-independent parser/validator tests",
+      "task/source/oracle and priority review",
+      "source/data/plan hash freeze",
+      "exact installed model metadata"
+    ],
+    "stop": [
+      "transport uncertainty",
+      "model drift",
+      "budget breach",
+      "discovered scoring/task defect"
+    ]
+  },
+  "rights": {
+    "synthetic_material": "Original task data and framing, CC-BY-4.0; code MIT",
+    "model": "Qwen2.5-1.5B-Instruct Q4_K_M via Ollama; upstream Apache-2.0; no weights included",
+    "private_case_included": false,
+    "primary_sources": [
+      "https://ollama.com/library/qwen2.5:1.5b-instruct-q4_K_M",
+      "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/blob/main/LICENSE",
+      "https://docs.ollama.com/api/chat",
+      "https://docs.ollama.com/modelfile"
+    ],
+    "provenance": "New synthetic wording/encodings only. No transcript, private-derived numbers, unique plot or source links. Generic rapport/normative concepts only; not a reproduction of a private case.",
+    "code": "Runner/ledger adapted from owned MIT BF-01; prior files retained unchanged."
+  }
+}

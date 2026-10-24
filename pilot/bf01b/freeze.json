@@ -1,0 +1,94 @@
+{
+  "study_id": "BF-01B-2026-10-24",
+  "frozen_utc": "2026-10-24T13:57:59.054507Z",
+  "status": "FROZEN_BEFORE_FIRST_INFERENCE",
+  "model_calls_before_freeze": 0,
+  "preregistered": false,
+  "files": [
+    {
+      "path": "DESIGN.md",
+      "bytes": 13363,
+      "sha256": "10ec6911deb329e1ba2b83c73592b8e74ba2bcba015b60781b4b533d6951660c"
+    },
+    {
+      "path": "MODEL-LICENSE.txt",
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "path": "PRE_RUN_REVIEW.md",
+      "bytes": 4067,
+      "sha256": "66dfc90c3094cf240014954cf42d7fff2fc732f7e22ae7614762048825e1d7b7"
+    },
+    {
+      "path": "analyze.py",
+      "bytes": 13187,
+      "sha256": "bf684d9ff5619a1022f624401906e37518260e699d676098647f18e2a72eff4d"
+    },
+    {
+      "path": "cases.jsonl",
+      "bytes": 402230,
+      "sha256": "880d55c322a226b7906a7d77114648080b3f675d181dfe343a30e6aa4d5ddce0"
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 20225,
+      "sha256": "20a5641fb032a9e07ba7a79eb5db17db70e2cc033c2fcb5bf069a76f61be848e"
+    },
+    {
+      "path": "model-template.txt",
+      "bytes": 1482,
+      "sha256": "eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175"
+    },
+    {
+      "path": "plan.json",
+      "bytes": 6575,
+      "sha256": "7066e6d484ab02af34e215d90c5be6b2408c554e97a1cd75e1565b438a779ec3"
+    },
+    {
+      "path": "prepare.py",
+      "bytes": 4045,
+      "sha256": "e0e12225fca5bf55d35c847d700854d2a06ba25dfffa5d7a2494bacefc80ba66"
+    },
+    {
+      "path": "run_local.py",
+      "bytes": 12386,
+      "sha256": "546dd2de507eaf95e56a5074faa80306f6c3f005f7385fc24309d40daf00f85f"
+    },
+    {
+      "path": "tasks.json",
+      "bytes": 24206,
+      "sha256": "fc26bb4f254ec06ce54801b433de382a97a11439af87f5c6b9042bf24dec4606"
+    },
+    {
+      "path": "test_analysis.py",
+      "bytes": 3730,
+      "sha256": "41a80b0e8ba7c6660d459eda4aa88ad3185081e5170127bd4a23ee7efce97bee"
+    },
+    {
+      "path": "test_evaluate.py",
+      "bytes": 17659,
+      "sha256": "850f0819839a386aa1189813909c2cb1af5c4a2af787f7e0b74a70e9bdeffa68"
+    },
+    {
+      "path": "test_runner.py",
+      "bytes": 17595,
+      "sha256": "af03e06d9a1880fec18a64c8d0e2ee6d5e838b8559fdf76fca9ebeefb06f596f"
+    },
+    {
+      "path": "test_validators.py",
+      "bytes": 19790,
+      "sha256": "8b685ac6aa363c69d349ba78f6e87a13be877b7a97914077376d69c40abef82c"
+    },
+    {
+      "path": "validators.py",
+      "bytes": 10438,
+      "sha256": "4623a8a365e477ebc6407c450b262a5b7193b6aceecdbf17b3c68405bcb74749"
+    }
+  ],
+  "pre_outcome_changes": [
+    "Added matched plain request controls before collection: five arms became seven, finite budget fixed at 168 calls.",
+    "Added source-independent single-object extraction before collection so suffix prose receives a meaningful ordinary parser baseline."
+  ],
+  "limitation": "Local timestamped integrity record, not external preregistration or proof against a malicious owner."
+}

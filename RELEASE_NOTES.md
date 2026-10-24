@@ -1,3 +1,31 @@
+# Companion package 1.2.0
+
+Add BF-01B: original synthetic content-integrity stress tests and four fixed
+offline output-processing baselines. See [the new report](pilot/bf01b/REPORT.md)
+for the actual retained outcomes, rather than treating the planned 168 cases as
+completed observations. The original manuscript, first pilot and prior tags
+remain unchanged.
+
+The cohort did complete all 168 calls, with no retries, truncations or transport
+errors. All strict raw replies failed format. Fence parsing recovered 78 correct
+answers and single-object extraction recovered one more. Extraction plus schema
+accepted 79 correct and 87 wrong objects, rejecting two; schema added no error
+interception. Relational versus plain-format arms each had 13 wrong accepts;
+legitimacy versus plain-default arms had 13 versus 14. Baseline errors and a raw
+score floor prevent interpreting pooled failures as successful emotional attacks.
+
+The new design distinguishes format recovery, rejection/abstention and accepted
+factual error. Seven arms include plain requests matched to social wording;
+24 instances cover six representations of one semantic operation. All inputs,
+strategies, validators, scoring and the finite budget are frozen before collection.
+It targets content usefulness and source-state truth, not performance faults.
+No private case, new model download, paid API or outcome-driven prompt revision.
+The 128-token/call, 168-call and 20-minute global ceilings are safeguards.
+
+Offline tests and saved-output replay are added to Ubuntu CI. They do not repeat
+model inference or validate a universal defense. The two studies are developmental
+companions, not completion of the broader prospective research cards.
+
 # Companion package 1.1.0
 
 BF-01 developmental feasibility companion, 24 October 2026. The manuscript, PDF and historical prospective protocol remain at version 1.0.0; the original tag is preserved.

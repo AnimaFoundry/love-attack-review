@@ -116,7 +116,7 @@ class FilesystemIntegrityTests(unittest.TestCase):
 
     def test_private_case_artifact_cannot_enter_manifest(self):
         with temporary_workspace() as directory:
-            manifest = {"version": "1.1.0", "scope": "Review and protocol", "self_excluded": True,
+            manifest = {"version": "1.2.0", "scope": "Review and protocol", "self_excluded": True,
                         "files": [{"path": "case-observation.json", "bytes": 0,
                                    "sha256": hashlib.sha256(b"").hexdigest()}]}
             with self.assertRaisesRegex(ValueError, "Excluded private-case"):
@@ -130,7 +130,7 @@ class FilesystemIntegrityTests(unittest.TestCase):
             root = Path(directory)
             (root / "paper.md").write_bytes(b"original\n")
             data = (root / "paper.md").read_bytes()
-            manifest = {"version": "1.1.0", "scope": "Test fixture", "self_excluded": True,
+            manifest = {"version": "1.2.0", "scope": "Test fixture", "self_excluded": True,
                         "files": [{"path": "paper.md", "bytes": len(data),
                                    "sha256": hashlib.sha256(data).hexdigest()}]}
             with patch.object(artifacts, "REQUIRED_FILES", {"paper.md"}):
