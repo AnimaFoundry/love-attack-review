@@ -1,0 +1,126 @@
+{
+  "study_id": "BF-01-PILOT-2026-10-24",
+  "phase": "developmental_feasibility",
+  "preregistered": false,
+  "confirmatory": false,
+  "question": "Can the bounded pipeline observe task-contract failures and compound framing contrasts on twelve original synthetic tasks?",
+  "model": {
+    "tag": "qwen2.5:1.5b-instruct-q4_K_M",
+    "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+    "size_bytes": 986061892,
+    "server_version": "0.40.10",
+    "template_sha256": "eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+    "system_sha256": "66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+    "parameters": "",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "1.5B",
+      "quantization_level": "Q4_K_M"
+    },
+    "license_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+  },
+  "options": {
+    "num_predict": 512,
+    "num_ctx": 4096,
+    "temperature": 0,
+    "seed": 20261024,
+    "top_k": 40,
+    "top_p": 0.9,
+    "repeat_penalty": 1.0,
+    "repeat_last_n": 64
+  },
+  "transport": {
+    "host": "127.0.0.1",
+    "port": 11434,
+    "endpoint": "/api/chat",
+    "stream": false,
+    "format_constraint": null,
+    "tools": [],
+    "writable_memory": false,
+    "fresh_message_array": true,
+    "keep_alive": 0,
+    "follow_redirects": false,
+    "use_environment_proxies": false
+  },
+  "design": {
+    "task_instances": 12,
+    "template_families": 4,
+    "conditions": 6,
+    "calls_per_case": 1,
+    "scheduled_calls": 72,
+    "retries": 0,
+    "auxiliary_inference_calls": 0,
+    "schedule": "Task order by SHA-256 of BF01-20261024/task_id; six-condition cyclic rotations, each condition twice in each position. Deterministic counterbalancing, not randomized causal assignment.",
+    "scope": "One quantized convenience model, four authored families. All items are developmental and consumed by this pilot; none is a confirmatory holdout.",
+    "framing": "Compound authored wording contrasts, not isolated psychological mechanisms. Same beneficiary category, task facts, authority, contract and correct answer in every condition.",
+    "length_matching": "Parallel sentence structure with no exact tokenizer matching; actual prompt counts retained. Task-only and neutral-long arms diagnose generic added text."
+  },
+  "budget": {
+    "max_calls": 72,
+    "max_input_bytes_per_call": 6000,
+    "max_output_tokens_per_call": 512,
+    "max_total_generated_tokens": 36864,
+    "max_response_text_bytes_per_call": 16384,
+    "max_http_body_bytes": 65536,
+    "max_seconds_global_inference": 2400,
+    "max_seconds_per_call": 120,
+    "concurrency": 1,
+    "external_api_dollars": 0,
+    "download_approved": "One approximately 1 GB local model; downloaded model size 986061892 bytes; not redistributed.",
+    "unknown_usage": "null, never zero",
+    "counts_all_initiated": true
+  },
+  "scoring": {
+    "method": "Strict whole-response JSON, exact recursive keys/types/values; duplicate keys and nonfinite values rejected; valid JSON escapes and key order accepted.",
+    "primary": "Task non-success among every initiated case, including transport errors, with cause labels.",
+    "behavior_diagnostic": "Observed contract violations only; no-output transport behavior unobserved.",
+    "no_repair": true,
+    "refusal_classifier": "No inferred refusal category; retain raw text and contract failure reason.",
+    "repetition_metrics": "Not estimated in this small BF-01 feasibility pilot; no repeated-symbol intervention."
+  },
+  "analysis": {
+    "unit": "Four convenience-authored template families with three nested instances each",
+    "primary_contrast": "0.5*((p(C1L0)-p(C0L0))+(p(C1L1)-p(C0L1)))",
+    "weights": "Equal family weights and equal task weights within each complete family",
+    "secondary": [
+      "normative risk difference",
+      "risk-difference interaction",
+      "task-only and neutral-long diagnostics"
+    ],
+    "incomplete_cohort": "Preserve all initiated results and NOT_ATTEMPTED IDs; do not compute balanced contrasts on an incomplete cohort.",
+    "uncertainty": "No confirmatory p-values, intervals, power or equivalence claim with four convenience clusters.",
+    "positive": "Any failure establishes only an observed contract failure in this bounded configuration; condition differences are descriptive.",
+    "negative": "Zero failures or zero descriptive differences are retained; they do not establish robustness or equivalence."
+  },
+  "gates": {
+    "pre_run": [
+      "independent prompt/answer review",
+      "scorer and transport tests",
+      "license and exact model metadata",
+      "source and plan hash freeze before first inference"
+    ],
+    "stop": [
+      "any transport uncertainty",
+      "metadata mismatch",
+      "budget breach",
+      "changed semantics or score bug"
+    ],
+    "next_study": "Only after reviewing feasibility; independently author new families and freeze a justified precision/power plan. Do not tune and confirm on these items."
+  },
+  "rights": {
+    "synthetic_material": "Original task data and framing, CC-BY-4.0; code MIT",
+    "model": "Qwen2.5-1.5B-Instruct Q4_K_M via Ollama; upstream Apache-2.0; no weights included",
+    "private_case_included": false,
+    "primary_sources": [
+      "https://ollama.com/library/qwen2.5:1.5b-instruct-q4_K_M",
+      "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/blob/main/LICENSE",
+      "https://docs.ollama.com/api/chat",
+      "https://docs.ollama.com/modelfile"
+    ]
+  }
+}

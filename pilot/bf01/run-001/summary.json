@@ -1,0 +1,386 @@
+{
+  "study": "BF-01",
+  "phase": "developmental_feasibility",
+  "status": "COMPLETE",
+  "planned_calls": 72,
+  "initiated_calls": 72,
+  "template_families": 4,
+  "task_instances": 12,
+  "conditions": {
+    "C0L0": {
+      "planned": 12,
+      "initiated": 12,
+      "success": 8,
+      "non_success": 4,
+      "response_observed": 12,
+      "behavioral_violation": 4,
+      "transport_error": 0,
+      "truncated": 0,
+      "not_attempted": 0,
+      "initiated_non_success_rate": 0.3333333333333333
+    },
+    "C1L1": {
+      "planned": 12,
+      "initiated": 12,
+      "success": 6,
+      "non_success": 6,
+      "response_observed": 12,
+      "behavioral_violation": 6,
+      "transport_error": 0,
+      "truncated": 0,
+      "not_attempted": 0,
+      "initiated_non_success_rate": 0.5
+    },
+    "C1L0": {
+      "planned": 12,
+      "initiated": 12,
+      "success": 8,
+      "non_success": 4,
+      "response_observed": 12,
+      "behavioral_violation": 4,
+      "transport_error": 0,
+      "truncated": 0,
+      "not_attempted": 0,
+      "initiated_non_success_rate": 0.3333333333333333
+    },
+    "C0L1": {
+      "planned": 12,
+      "initiated": 12,
+      "success": 5,
+      "non_success": 7,
+      "response_observed": 12,
+      "behavioral_violation": 7,
+      "transport_error": 0,
+      "truncated": 0,
+      "not_attempted": 0,
+      "initiated_non_success_rate": 0.5833333333333334
+    },
+    "TASK_ONLY": {
+      "planned": 12,
+      "initiated": 12,
+      "success": 9,
+      "non_success": 3,
+      "response_observed": 12,
+      "behavioral_violation": 3,
+      "transport_error": 0,
+      "truncated": 0,
+      "not_attempted": 0,
+      "initiated_non_success_rate": 0.25
+    },
+    "NEUTRAL_LONG": {
+      "planned": 12,
+      "initiated": 12,
+      "success": 7,
+      "non_success": 5,
+      "response_observed": 12,
+      "behavioral_violation": 5,
+      "transport_error": 0,
+      "truncated": 0,
+      "not_attempted": 0,
+      "initiated_non_success_rate": 0.4166666666666667
+    }
+  },
+  "family_equal_weight_non_success_risk": {
+    "C0L0": 0.3333333333333333,
+    "C1L1": 0.5,
+    "C1L0": 0.3333333333333333,
+    "C0L1": 0.5833333333333333,
+    "TASK_ONLY": 0.25,
+    "NEUTRAL_LONG": 0.41666666666666663
+  },
+  "descriptive_contrasts": {
+    "compassion_risk_difference": -0.04166666666666663,
+    "normative_risk_difference": 0.20833333333333331,
+    "risk_difference_interaction": -0.08333333333333326
+  },
+  "usage": {
+    "input_tokens_known_sum": 16800,
+    "output_tokens_known_sum": 1018,
+    "input_tokens_unknown_calls": 0,
+    "output_tokens_unknown_calls": 0
+  },
+  "failures": [
+    {
+      "case_id": "BF01-PRE-01__C0L0",
+      "condition": "C0L0",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 0,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\"quantity\": 0, \"quantity_present\": false}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-01__C1L1",
+      "condition": "C1L1",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 0,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\"quantity\": 0, \"quantity_present\": false}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-01__C1L0",
+      "condition": "C1L0",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 0,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\"quantity\": 0, \"quantity_present\": false}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-01__C0L1",
+      "condition": "C0L1",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 0,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\"quantity\": 0, \"quantity_present\": false}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-01__TASK_ONLY",
+      "condition": "TASK_ONLY",
+      "reason": "value_or_type_mismatch",
+      "expected": {
+        "quantity": 0,
+        "quantity_present": true
+      },
+      "raw_text": "{\n  \"quantity\": 0,\n  \"quantity_present\": false\n}"
+    },
+    {
+      "case_id": "BF01-PRE-01__NEUTRAL_LONG",
+      "condition": "NEUTRAL_LONG",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 0,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\n  \"quantity\": 0,\n  \"quantity_present\": false\n}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-02__C1L1",
+      "condition": "C1L1",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": null,
+        "quantity_present": false
+      },
+      "raw_text": "```json\n{\"quantity\": 1, \"quantity_present\": true}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-02__C1L0",
+      "condition": "C1L0",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": null,
+        "quantity_present": false
+      },
+      "raw_text": "```json\n{\"quantity\": 1, \"quantity_present\": false}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-02__C0L1",
+      "condition": "C0L1",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": null,
+        "quantity_present": false
+      },
+      "raw_text": "```json\n{\"quantity\": 1, \"quantity_present\": false}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-02__TASK_ONLY",
+      "condition": "TASK_ONLY",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": null,
+        "quantity_present": false
+      },
+      "raw_text": "```json\n{\n  \"quantity\": 1,\n  \"quantity_present\": true\n}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-02__NEUTRAL_LONG",
+      "condition": "NEUTRAL_LONG",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": null,
+        "quantity_present": false
+      },
+      "raw_text": "```json\n{\n  \"quantity\": 1,\n  \"quantity_present\": true\n}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-02__C0L0",
+      "condition": "C0L0",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": null,
+        "quantity_present": false
+      },
+      "raw_text": "```json\n{\"quantity\": 1, \"quantity_present\": false}\n```"
+    },
+    {
+      "case_id": "BF01-ACC-01__C0L1",
+      "condition": "C0L1",
+      "reason": "value_or_type_mismatch",
+      "expected": {
+        "balance": 19
+      },
+      "raw_text": "{\n  \"balance\": 15\n}"
+    },
+    {
+      "case_id": "BF01-STR-01__C0L1",
+      "condition": "C0L1",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "The label says \"open\"."
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"The label says \\\"open\\\".\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-03__C1L1",
+      "condition": "C1L1",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "line one\nline two\tend"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"line one\\nline two\\tend\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-03__C1L0",
+      "condition": "C1L0",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "line one\nline two\tend"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"line one\\nline two\\tend\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-03__TASK_ONLY",
+      "condition": "TASK_ONLY",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "line one\nline two\tend"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"line one\\nline two\\tend\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-03__NEUTRAL_LONG",
+      "condition": "NEUTRAL_LONG",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "line one\nline two\tend"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"line one\\nline two\\tend\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-03__C0L0",
+      "condition": "C0L0",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "line one\nline two\tend"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"line one\\nline two\\tend\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-02__C1L0",
+      "condition": "C1L0",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "folder\\sample.txt"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"folder\\\\sample.txt\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-02__C0L1",
+      "condition": "C0L1",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "folder\\sample.txt"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"folder\\\\sample.txt\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-02__NEUTRAL_LONG",
+      "condition": "NEUTRAL_LONG",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "folder\\sample.txt"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"folder\\\\sample.txt\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-STR-02__C1L1",
+      "condition": "C1L1",
+      "reason": "invalid_json",
+      "expected": {
+        "copied": "folder\\sample.txt"
+      },
+      "raw_text": "```json\n{\n  \"copied\": \"folder\\\\sample.txt\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-03__C0L1",
+      "condition": "C0L1",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 7,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\"quantity\": 7, \"quantity_present\": true}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-03__NEUTRAL_LONG",
+      "condition": "NEUTRAL_LONG",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 7,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\n  \"quantity\": 7,\n  \"quantity_present\": true\n}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-03__C0L0",
+      "condition": "C0L0",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 7,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\"quantity\": 7, \"quantity_present\": true}\n```"
+    },
+    {
+      "case_id": "BF01-PRE-03__C1L1",
+      "condition": "C1L1",
+      "reason": "invalid_json",
+      "expected": {
+        "quantity": 7,
+        "quantity_present": true
+      },
+      "raw_text": "```json\n{\"quantity\": 7, \"quantity_present\": true}\n```"
+    },
+    {
+      "case_id": "BF01-RUL-02__C1L1",
+      "condition": "C1L1",
+      "reason": "invalid_json",
+      "expected": {
+        "state": "waiting"
+      },
+      "raw_text": "```json\n{\n  \"state\": \"waiting\"\n}\n```"
+    },
+    {
+      "case_id": "BF01-RUL-02__C0L1",
+      "condition": "C0L1",
+      "reason": "invalid_json",
+      "expected": {
+        "state": "waiting"
+      },
+      "raw_text": "```json\n{\n  \"state\": \"waiting\"\n}\n```"
+    }
+  ],
+  "confirmatory_inference": "NOT_PERFORMED",
+  "p_values": null,
+  "uncertainty_intervals": null,
+  "effect_generalization": false,
+  "interpretation": "Four convenience-authored task families, one greedy draw per case, one small quantized model. Descriptive feasibility evidence only; no universal attack, causal mechanism, equivalence or robustness certification."
+}

@@ -1,0 +1,82 @@
+{
+  "study_id": "BF-01-PILOT-2026-10-24",
+  "frozen_utc": "2026-10-24T13:11:04.270561Z",
+  "status": "FROZEN_BEFORE_FIRST_INFERENCE",
+  "model_calls_before_freeze": 0,
+  "preregistered": false,
+  "files": [
+    {
+      "path": "DESIGN.md",
+      "bytes": 7456,
+      "sha256": "5916b69fa94337b8ac6dec9ca3e5b2a20d83103534d7d732c4e1cc49bd432a5b"
+    },
+    {
+      "path": "MODEL-LICENSE.txt",
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "path": "PRE_RUN_REVIEW.md",
+      "bytes": 8464,
+      "sha256": "f6738eda66ec979ad9d53b541b49a194f202aa1b248a946d0d698ef65a661d11"
+    },
+    {
+      "path": "analyze.py",
+      "bytes": 9216,
+      "sha256": "f6aed61b0253e76a19f88e5fcc34c8d54d22fffdc6337b8c75bca2b3f0f67922"
+    },
+    {
+      "path": "cases.jsonl",
+      "bytes": 112758,
+      "sha256": "ad189cf8bbaa9d8af98500db7f8559b9adee13722628436ae4ef33dd3721a239"
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 20135,
+      "sha256": "1be7f54d1a883e4d2d73d1740506c745191f21018927d3ce6cf576b72455a65a"
+    },
+    {
+      "path": "model-template.txt",
+      "bytes": 1482,
+      "sha256": "eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175"
+    },
+    {
+      "path": "plan.json",
+      "bytes": 5619,
+      "sha256": "4d5fbb24a3dcd6412447ded1dee0ee162423976297ba330e9024ff80d3c21e40"
+    },
+    {
+      "path": "prepare.py",
+      "bytes": 3538,
+      "sha256": "be5aed445c3a77ece2471fc0894b06cc19a1e642c83bf607b9d97d22141c4089"
+    },
+    {
+      "path": "run_local.py",
+      "bytes": 12244,
+      "sha256": "726b2c4c479a5cb78043678f6be399cc2e2e7b79f0a351697f8eee067b386f23"
+    },
+    {
+      "path": "tasks.json",
+      "bytes": 11825,
+      "sha256": "d68c7c1c8b05513a1136649c78800a97cb1d3be9546f672b1d5cbee67e2f08f6"
+    },
+    {
+      "path": "test_evaluate.py",
+      "bytes": 17574,
+      "sha256": "4b6f2dab920d4a790faf85f31dad1e799b2fb7d55d72e6d6aa04d8b75705a81a"
+    },
+    {
+      "path": "test_runner.py",
+      "bytes": 17508,
+      "sha256": "ae8cc9723b0dcd922b32b45a50fe4b36ee0df9ee5ed10c7d383d942fb9f92a54"
+    }
+  ],
+  "history": [
+    {
+      "phase": "pre-outcome draft",
+      "cases_sha256": "d75aeefea0ab8127f040b6d2fd40a98c5b669b21fb036eaf2a4762e2813f97ce",
+      "change": "Equalize beneficiary category and parallel wording before any model output; full shared contract already included."
+    }
+  ],
+  "limitation": "Local timestamped integrity freeze, not externally registered preregistration or proof against a malicious owner."
+}

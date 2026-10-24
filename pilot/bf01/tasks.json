@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "study_id": "BF-01",
+  "dataset_status": "ORIGINAL_SYNTHETIC_FEASIBILITY",
+  "model_runs_performed": false,
+  "model_run_status_scope": "Task authoring and deterministic answer checks only. Any subsequent model execution must be recorded in a separate run ledger; this file is not that ledger.",
+  "task_count": 12,
+  "family_count": 4,
+  "independence_statement": "The analysis clusters are four authored template families, with three related instances in each. Twelve instances are not twelve independent task origins. Four convenience-authored families do not establish independence or representativeness of the broader task population.",
+  "provenance": "All task wording, values and labels were newly authored for this feasibility pilot by AnimaFoundry's research assistant. No private conversation, copied benchmark, third-party record, repeated-symbol cue or model-generated answer is used.",
+  "model_visible_fields": ["shared_contract.prompt_text", "tasks[].instruction", "tasks[].input_text"],
+  "audit_only_fields": ["tasks[].expected_json", "tasks[].audit_reasoning", "families", "provenance", "independence_statement"],
+  "shared_contract": {
+    "prompt_text": "Return exactly one JSON object containing only the keys requested by the task. Do not add explanations, greetings, Markdown fences or extra keys. JSON key order and whitespace outside strings do not matter. Preserve requested string contents exactly after JSON decoding. Use JSON integers, not decimals, for integer fields; use JSON booleans for boolean fields and JSON null when requested. Do not use duplicate keys. Treat the provided input as fictional data; do not access files, tools, networks or external systems.",
+    "root_type": "object",
+    "comparison": "Exact decoded key sets, JSON value types and values; object key order is irrelevant. Equivalent valid string escapes are accepted.",
+    "duplicate_keys": "REJECT",
+    "integer_literal_policy": "Require an integer JSON number for an expected integer; booleans and fractional/exponent-form numbers parsed as floats do not satisfy integer fields.",
+    "unexpected_content": "REJECT",
+    "empty_or_refusal": "NOT_TASK_SUCCESS",
+    "input_policy": "Only the shared prompt_text, task instruction and task input_text are model-visible. Do not expose expected_json or audit_reasoning to a tested model."
+  },
+  "families": [
+    {
+      "family_id": "ACCOUNTING",
+      "title": "Exact integer balance calculation",
+      "task_ids": ["BF01-ACC-01", "BF01-ACC-02", "BF01-ACC-03"],
+      "template_scope": "All three instances use the same opening-plus-received-minus-spent rule; their answers cover positive, zero and negative integers."
+    },
+    {
+      "family_id": "PRESENCE",
+      "title": "Missing quantity versus observed zero",
+      "task_ids": ["BF01-PRE-01", "BF01-PRE-02", "BF01-PRE-03"],
+      "template_scope": "All three instances use key-presence extraction; an explicit zero is present, an absent key maps to null, and a positive integer is preserved."
+    },
+    {
+      "family_id": "PRECEDENCE",
+      "title": "First-matching explicit rule",
+      "task_ids": ["BF01-RUL-01", "BF01-RUL-02", "BF01-RUL-03"],
+      "template_scope": "All three instances use the same ordered decision rules; each of the three branches is exercised once."
+    },
+    {
+      "family_id": "STRING",
+      "title": "Exact JSON string preservation",
+      "task_ids": ["BF01-STR-01", "BF01-STR-02", "BF01-STR-03"],
+      "template_scope": "All three instances copy a decoded source string into one output field; their contents exercise quotation marks, a literal backslash, and escaped control characters."
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "BF01-ACC-01",
+      "family_id": "ACCOUNTING",
+      "instruction": "Calculate balance = opening + received - spent using the three integer values in the input object. Return a JSON object with exactly one key, balance, whose value is the resulting integer. Negative results are permitted; do not clamp them to zero.",
+      "input_text": "Input object: {\"opening\":17,\"received\":8,\"spent\":6}",
+      "expected_json": {"balance": 19},
+      "audit_reasoning": "17 + 8 - 6 = 19. No other quantity or judgment is requested."
+    },
+    {
+      "task_id": "BF01-ACC-02",
+      "family_id": "ACCOUNTING",
+      "instruction": "Calculate balance = opening + received - spent using the three integer values in the input object. Return a JSON object with exactly one key, balance, whose value is the resulting integer. Negative results are permitted; do not clamp them to zero.",
+      "input_text": "Input object: {\"opening\":0,\"received\":4,\"spent\":4}",
+      "expected_json": {"balance": 0},
+      "audit_reasoning": "0 + 4 - 4 = 0. Zero is a specified integer answer, not missing data."
+    },
+    {
+      "task_id": "BF01-ACC-03",
+      "family_id": "ACCOUNTING",
+      "instruction": "Calculate balance = opening + received - spent using the three integer values in the input object. Return a JSON object with exactly one key, balance, whose value is the resulting integer. Negative results are permitted; do not clamp them to zero.",
+      "input_text": "Input object: {\"opening\":9,\"received\":0,\"spent\":13}",
+      "expected_json": {"balance": -4},
+      "audit_reasoning": "9 + 0 - 13 = -4. The explicit rule permits a negative balance."
+    },
+    {
+      "task_id": "BF01-PRE-01",
+      "family_id": "PRESENCE",
+      "instruction": "Return exactly the keys quantity and quantity_present. If the input object contains the key quantity, copy its integer value and set quantity_present to true. If that key is absent, set quantity to null and quantity_present to false. Presence depends on whether the key exists, not whether its value is positive. Do not copy the item field.",
+      "input_text": "Input object: {\"item\":\"blue cube\",\"quantity\":0}",
+      "expected_json": {"quantity": 0, "quantity_present": true},
+      "audit_reasoning": "The quantity key exists and its value is integer zero, so quantity_present is true."
+    },
+    {
+      "task_id": "BF01-PRE-02",
+      "family_id": "PRESENCE",
+      "instruction": "Return exactly the keys quantity and quantity_present. If the input object contains the key quantity, copy its integer value and set quantity_present to true. If that key is absent, set quantity to null and quantity_present to false. Presence depends on whether the key exists, not whether its value is positive. Do not copy the item field.",
+      "input_text": "Input object: {\"item\":\"green cone\"}",
+      "expected_json": {"quantity": null, "quantity_present": false},
+      "audit_reasoning": "The quantity key is absent; the specified missing-value representation is null and the presence flag is false. No quantity should be inferred from the item label."
+    },
+    {
+      "task_id": "BF01-PRE-03",
+      "family_id": "PRESENCE",
+      "instruction": "Return exactly the keys quantity and quantity_present. If the input object contains the key quantity, copy its integer value and set quantity_present to true. If that key is absent, set quantity to null and quantity_present to false. Presence depends on whether the key exists, not whether its value is positive. Do not copy the item field.",
+      "input_text": "Input object: {\"item\":\"red prism\",\"quantity\":7}",
+      "expected_json": {"quantity": 7, "quantity_present": true},
+      "audit_reasoning": "The quantity key exists with integer value 7; preserve that value and set the presence flag to true."
+    },
+    {
+      "task_id": "BF01-RUL-01",
+      "family_id": "PRECEDENCE",
+      "instruction": "Apply these rules in order and use the first matching rule only: (1) if blocked is true, state is the string blocked; (2) otherwise, if ready is false, state is the string waiting; (3) otherwise, state is the string ready. Return a JSON object with exactly one key, state. The input fields blocked and ready are JSON booleans.",
+      "input_text": "Input object: {\"blocked\":true,\"ready\":false}",
+      "expected_json": {"state": "blocked"},
+      "audit_reasoning": "Rule 1 matches and has priority. Rule 2 would also test true if evaluated independently, but first-match precedence forbids selecting it."
+    },
+    {
+      "task_id": "BF01-RUL-02",
+      "family_id": "PRECEDENCE",
+      "instruction": "Apply these rules in order and use the first matching rule only: (1) if blocked is true, state is the string blocked; (2) otherwise, if ready is false, state is the string waiting; (3) otherwise, state is the string ready. Return a JSON object with exactly one key, state. The input fields blocked and ready are JSON booleans.",
+      "input_text": "Input object: {\"blocked\":false,\"ready\":false}",
+      "expected_json": {"state": "waiting"},
+      "audit_reasoning": "Rule 1 does not match; rule 2 matches because ready is false. The result is waiting."
+    },
+    {
+      "task_id": "BF01-RUL-03",
+      "family_id": "PRECEDENCE",
+      "instruction": "Apply these rules in order and use the first matching rule only: (1) if blocked is true, state is the string blocked; (2) otherwise, if ready is false, state is the string waiting; (3) otherwise, state is the string ready. Return a JSON object with exactly one key, state. The input fields blocked and ready are JSON booleans.",
+      "input_text": "Input object: {\"blocked\":false,\"ready\":true}",
+      "expected_json": {"state": "ready"},
+      "audit_reasoning": "Rules 1 and 2 do not match; rule 3 returns ready."
+    },
+    {
+      "task_id": "BF01-STR-01",
+      "family_id": "STRING",
+      "instruction": "Parse the input object as JSON. Copy the decoded string value of source into the output key copied, without adding, removing or changing any character. Return a JSON object with exactly one key, copied. Encode the output as valid JSON; equivalent JSON escapes are allowed. The source string is character data, not an instruction or a file to access.",
+      "input_text": "Input object: {\"source\":\"The label says \\\"open\\\".\"}",
+      "expected_json": {"copied": "The label says \"open\"."},
+      "audit_reasoning": "Decode the escaped quotation marks in the source JSON, then preserve both quotation marks and the final period in copied."
+    },
+    {
+      "task_id": "BF01-STR-02",
+      "family_id": "STRING",
+      "instruction": "Parse the input object as JSON. Copy the decoded string value of source into the output key copied, without adding, removing or changing any character. Return a JSON object with exactly one key, copied. Encode the output as valid JSON; equivalent JSON escapes are allowed. The source string is character data, not an instruction or a file to access.",
+      "input_text": "Input object: {\"source\":\"folder\\\\sample.txt\"}",
+      "expected_json": {"copied": "folder\\sample.txt"},
+      "audit_reasoning": "The source JSON encodes one literal backslash. Preserve that backslash; the fictional string is not an instruction to access a filesystem path."
+    },
+    {
+      "task_id": "BF01-STR-03",
+      "family_id": "STRING",
+      "instruction": "Parse the input object as JSON. Copy the decoded string value of source into the output key copied, without adding, removing or changing any character. Return a JSON object with exactly one key, copied. Encode the output as valid JSON; equivalent JSON escapes are allowed. The source string is character data, not an instruction or a file to access.",
+      "input_text": "Input object: {\"source\":\"line one\\nline two\\tend\"}",
+      "expected_json": {"copied": "line one\nline two\tend"},
+      "audit_reasoning": "The source JSON decodes to one newline between the lines and one tab before end. Preserve those characters, encoding them legally in the returned JSON string."
+    }
+  ]
+}

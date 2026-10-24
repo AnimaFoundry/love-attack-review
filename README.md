@@ -1,9 +1,9 @@
 # Compassion and Legitimacy Framing in LLM Systems
 
 **Evidence, Threat Boundaries, and a Controlled Evaluation Protocol**  
-AnimaFoundry · Version 1.0.0 · 24 October 2026
+AnimaFoundry · Companion package 1.1.0 · Manuscript 1.0.0 · 24 October 2026
 
-A selective critical integrative review and a prospective benign evaluation protocol. **Research preprint; not peer reviewed. No new controlled model experiment or validated defense is reported.**
+A selective critical integrative review and a prospective benign evaluation protocol. **The manuscript is an unchanged research preprint, not peer reviewed.** Package 1.1.0 adds a separate, bounded BF-01 developmental feasibility companion. Its execution status and observed outcomes are reported in [the pilot report](pilot/bf01/REPORT.md), not retroactively inserted into the paper. No validated defense or confirmatory framing result is claimed.
 
 The informal project label *The Love Attack* names the originating question. It is not a demonstrated new exploit or an established attack class.
 
@@ -21,16 +21,46 @@ Suggested citation: AnimaFoundry. (2026). *Compassion and Legitimacy Framing in 
 It separates useful emotional adaptation, task-contract failure, evaluator manipulation, unauthorized actions, repeated output, and service-level disruption. Existing findings about these outcomes have different tasks and denominators and cannot be combined into a single attack success rate.
 
 
-## Research opportunities and handoff
+## Historical research opportunities and current pilot
 
-| Card | Question | Status |
+| Card | Question | Status in the unchanged v1.0.0 protocol |
 |---|---|---|
 | BF-01 | Can semantic compassion and legitimacy framing change adherence while task and authority remain fixed? | NOT_PERFORMED |
 | BF-02 | Can a short repeated-symbol cue explain repetition independently of semantic framing? | NOT_PERFORMED |
 | BF-03 | Can defenses retain legitimate utility under an equal total resource ceiling? | NOT_PERFORMED |
 | BF-04 | Does an effect depend on retained context or an explicit toy-memory channel? | NOT_PERFORMED |
 
-Start with [EXPERIMENT_HANDOFF.md](EXPERIMENT_HANDOFF.md) and the machine-readable [protocol.json](protocol.json). Model versions, stimuli, sample size, power/precision plan, and finite budgets remain unfrozen. No inference runner, attack prompts, propagation mechanism, or service-load experiment is supplied. The first useful next step is a reviewed matched-item set and bounded feasibility plan; a negative or inconclusive result is an acceptable research outcome.
+The original [EXPERIMENT_HANDOFF.md](EXPERIMENT_HANDOFF.md) and [protocol.json](protocol.json) remain historical prospective documents. Their `NOT_PERFORMED` statuses and unfrozen confirmatory designs are preserved. The new BF-01 pilot is a narrower developmental study; it does not complete the broad prospective card or change the status of BF-02, BF-03 or BF-04.
+
+### BF-01 feasibility companion
+
+Read [REPORT.md](pilot/bf01/REPORT.md) for actual completion, all observed failures and interpretation. The [task design](pilot/bf01/DESIGN.md), [frozen plan](pilot/bf01/plan.json), [pre-run review](pilot/bf01/PRE_RUN_REVIEW.md), [source freeze](pilot/bf01/freeze.json) and [retained run evidence](pilot/bf01/run-001/) make the limited study auditable. Thirteen task, source, plan, review and model-license/template files are frozen before inference; raw outcomes and their analysis are retained separately.
+
+The plan specifies 12 original synthetic tasks in **four authored template families**, with six conditions: four compassion-by-legitimacy wording combinations, a task-only control and a neutral longer-text diagnostic. It uses deterministic counterbalancing, not randomized causal assignment. Twelve task instances and 72 scheduled calls are not 12 or 72 independent task origins. All items are development data; no untouched confirmation set or power calculation is claimed. Length matching is approximate, and the wording contrasts do not isolate a psychological mechanism.
+
+The exact local model is `qwen2.5:1.5b-instruct-q4_K_M`, 986,061,892 bytes, under the model's Apache-2.0 terms. Its digest, template, runtime and settings are recorded in the plan. The finite ceiling is 72 calls, temperature 0, at most 512 generated tokens per call, 40 minutes total inference time, 120 seconds per call and concurrency one. There are no retries or auxiliary inference calls. The approved download is approximately 1 GB and the external API budget is USD 0; local electricity and hardware are not claimed to be free. These are ceilings and scheduled counts, not assertions that every case completed.
+
+#### Offline inspection and analysis
+
+From the repository root, these commands make no model calls and download no model:
+
+```sh
+python pilot/bf01/prepare.py
+python -m unittest discover -s pilot/bf01 -p 'test_*.py' -v
+python pilot/bf01/analyze.py pilot/bf01/run-001 --check
+```
+
+`prepare.py` generates the finite schedule without inference. It is idempotent for the retained identical schedule and refuses to replace a different existing schedule. `analyze.py --check` reconstructs scores and descriptive summaries from the retained raw responses and checks the saved summary without changing it. Expected answers and audit reasoning are scoring materials; the live request contains only the frozen messages.
+
+#### Live repetition is a separate decision
+
+The runner requires an already installed local model and runtime matching the exact frozen metadata. It does not pull a model automatically. Before any separately authorized repetition, review the plan and source freeze, confirm rights and the complete attempt/token/time budget, and use a new, unused destination:
+
+```sh
+python pilot/bf01/run_local.py --destination pilot/bf01/run-new
+```
+
+This command can initiate a new 72-call cohort; **do not run it as part of an ordinary document rebuild or automatically repeat a failed or uninteresting cohort**. An existing destination is never resumed or overwritten. A new directory does not itself authorize resetting a research budget. Metadata mismatch, transport uncertainty or a budget breach stops collection; audit an incomplete run before deciding on new work. An independent repetition may produce different output even with the same seed and temperature. Preserve each initiated outcome and every unattempted ID, rather than replacing failures with retries.
 
 ## Rebuild the publication package
 
@@ -39,17 +69,19 @@ Use Python 3.12 from the repository root:
 ```sh
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
+python -m unittest discover -s pilot/bf01 -p 'test_*.py' -v
+python pilot/bf01/analyze.py pilot/bf01/run-001 --check
 python scripts/verify_metadata.py
 python scripts/build_paper.py --output-dir build/reproduced
 python scripts/verify_artifacts.py --rebuild-dir build/reproduced
 ```
 
-Document rebuilding and metadata tests validate publication artifacts only. They do not reproduce the cited studies or validate the proposed framing hypothesis. The release manifest lists exact public files and SHA-256 digests. It excludes itself to avoid a recursive hash definition.
+Document rebuilding and metadata tests validate publication artifacts. Offline pilot checks validate retained evidence and recompute its scores; they do not execute the model again. Ubuntu CI performs these offline checks and the paper rebuild, with no model download or live inference. It is not a Linux model replication, reproduction of cited studies, or empirical validation of the general framing hypothesis. The release manifest lists exact public files and SHA-256 digests. It excludes itself to avoid a recursive hash definition.
 
 ## Evidence and reuse boundaries
 
-Original prose, schematic, and protocol: [CC BY 4.0](LICENSE-TEXT). Publication scripts, tests, and workflows: [MIT](LICENSE-CODE). The third-party CFF schema carries its own license and provenance under `schemas/`. See [SOURCE_AND_RIGHTS.md](SOURCE_AND_RIGHTS.md).
+Original prose, schematic, protocol and synthetic pilot inputs: [CC BY 4.0](LICENSE-TEXT). Publication and pilot scripts, tests and workflows: [MIT](LICENSE-CODE). The third-party CFF schema carries its own license and provenance under `schemas/`. The model template and complete Apache-2.0 notice are retained in the pilot directory. See [SOURCE_AND_RIGHTS.md](SOURCE_AND_RIGHTS.md) for model sources and output boundaries.
 
-This package does not redistribute third-party papers, benchmark prompts, model weights, or private conversations. Citation is not permission to copy those materials. No patent clearance, novelty, peer-review status, or empirical defense guarantee is claimed.
+The pilot retains raw model responses only to the project's original synthetic prompts. It includes no private conversation case or real customer record. This package does not redistribute third-party papers, benchmark prompts or model weights. Citation is not permission to copy those materials. No patent clearance, novelty, freedom-to-operate conclusion, peer-review status or empirical defense guarantee is claimed.
 
 The paper and structured companion files can be read directly without executing code. We make no claim that search engines or agents have indexed, crawled, trained on, or endorsed them. Please file a reproducible correction through this repository's Issues, omitting credentials and private transcripts.

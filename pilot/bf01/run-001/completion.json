@@ -1,0 +1,12 @@
+{
+  "finished_utc": "2026-10-24T13:14:58.961235Z",
+  "planned": 72,
+  "initiated": 72,
+  "not_attempted": [],
+  "stop_reason": null,
+  "external_api_dollars": 0,
+  "retries": 0,
+  "auxiliary_inference_calls": 0,
+  "elapsed_seconds": 223.96799999999348,
+  "status": "COMPLETE"
+}

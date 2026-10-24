@@ -24,7 +24,7 @@ class CitationMetadataTests(unittest.TestCase):
     def test_real_exports_and_official_schema_pass(self):
         result = metadata.verify(ROOT)
         self.assertEqual(result["article_version"], "1.0.0")
-        self.assertEqual(result["software_version"], "1.0.0")
+        self.assertEqual(result["software_version"], "1.1.0")
         self.assertFalse(result["scientific_claim_validation"])
 
     def test_article_rejected_at_cff_root_by_official_schema(self):
