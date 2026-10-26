@@ -1,0 +1,2646 @@
+{
+  "study": "BF-01C",
+  "interpretation": "Developmental task-only cohort; no causal, social-framing, deployment or product-value inference.",
+  "scheduled": 32,
+  "initiated": 32,
+  "unattempted_ids": [],
+  "overall": {
+    "initiated": 32,
+    "delivered": 32,
+    "strict_wire_json": 32,
+    "strict_contract": 20,
+    "decoded_schema_valid": 20,
+    "semantic_correct": 16,
+    "semantic_wrong": 16,
+    "semantic_unscorable": 0,
+    "binding_applicable": 16,
+    "binding_correct": 4,
+    "joint_correct": 10,
+    "pipelines": {
+      "decoded_schema": {
+        "accepted_correct": 10,
+        "accepted_wrong": 10,
+        "rejected": 12,
+        "unavailable": 0,
+        "coverage": 0.625,
+        "correct_among_accepted": 0.5,
+        "accepted_semantic_wrong": 9,
+        "accepted_semantic_unscorable": 0,
+        "accepted_format_only": 0,
+        "accepted_binding_wrong": 2
+      },
+      "strict_contract": {
+        "accepted_correct": 10,
+        "accepted_wrong": 10,
+        "rejected": 12,
+        "unavailable": 0,
+        "coverage": 0.625,
+        "correct_among_accepted": 0.5,
+        "accepted_semantic_wrong": 9,
+        "accepted_semantic_unscorable": 0,
+        "accepted_format_only": 0,
+        "accepted_binding_wrong": 2
+      },
+      "source_gate": {
+        "accepted_correct": 10,
+        "accepted_wrong": 0,
+        "rejected": 22,
+        "unavailable": 0,
+        "coverage": 0.3125,
+        "correct_among_accepted": 1.0,
+        "accepted_semantic_wrong": 0,
+        "accepted_semantic_unscorable": 0,
+        "accepted_format_only": 0,
+        "accepted_binding_wrong": 0
+      }
+    }
+  },
+  "by_arm": {
+    "schema_evidence": {
+      "initiated": 8,
+      "delivered": 8,
+      "strict_wire_json": 8,
+      "strict_contract": 0,
+      "decoded_schema_valid": 0,
+      "semantic_correct": 5,
+      "semantic_wrong": 3,
+      "semantic_unscorable": 0,
+      "binding_applicable": 8,
+      "binding_correct": 0,
+      "joint_correct": 0,
+      "pipelines": {
+        "decoded_schema": {
+          "accepted_correct": 0,
+          "accepted_wrong": 0,
+          "rejected": 8,
+          "unavailable": 0,
+          "coverage": 0.0,
+          "correct_among_accepted": null,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "strict_contract": {
+          "accepted_correct": 0,
+          "accepted_wrong": 0,
+          "rejected": 8,
+          "unavailable": 0,
+          "coverage": 0.0,
+          "correct_among_accepted": null,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "source_gate": {
+          "accepted_correct": 0,
+          "accepted_wrong": 0,
+          "rejected": 8,
+          "unavailable": 0,
+          "coverage": 0.0,
+          "correct_among_accepted": null,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        }
+      }
+    },
+    "raw_no_evidence": {
+      "initiated": 8,
+      "delivered": 8,
+      "strict_wire_json": 8,
+      "strict_contract": 7,
+      "decoded_schema_valid": 7,
+      "semantic_correct": 3,
+      "semantic_wrong": 5,
+      "semantic_unscorable": 0,
+      "binding_applicable": 0,
+      "binding_correct": 0,
+      "joint_correct": 3,
+      "pipelines": {
+        "decoded_schema": {
+          "accepted_correct": 3,
+          "accepted_wrong": 4,
+          "rejected": 1,
+          "unavailable": 0,
+          "coverage": 0.875,
+          "correct_among_accepted": 0.42857142857142855,
+          "accepted_semantic_wrong": 4,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "strict_contract": {
+          "accepted_correct": 3,
+          "accepted_wrong": 4,
+          "rejected": 1,
+          "unavailable": 0,
+          "coverage": 0.875,
+          "correct_among_accepted": 0.42857142857142855,
+          "accepted_semantic_wrong": 4,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "source_gate": {
+          "accepted_correct": 3,
+          "accepted_wrong": 0,
+          "rejected": 5,
+          "unavailable": 0,
+          "coverage": 0.375,
+          "correct_among_accepted": 1.0,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        }
+      }
+    },
+    "schema_no_evidence": {
+      "initiated": 8,
+      "delivered": 8,
+      "strict_wire_json": 8,
+      "strict_contract": 8,
+      "decoded_schema_valid": 8,
+      "semantic_correct": 4,
+      "semantic_wrong": 4,
+      "semantic_unscorable": 0,
+      "binding_applicable": 0,
+      "binding_correct": 0,
+      "joint_correct": 4,
+      "pipelines": {
+        "decoded_schema": {
+          "accepted_correct": 4,
+          "accepted_wrong": 4,
+          "rejected": 0,
+          "unavailable": 0,
+          "coverage": 1.0,
+          "correct_among_accepted": 0.5,
+          "accepted_semantic_wrong": 4,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "strict_contract": {
+          "accepted_correct": 4,
+          "accepted_wrong": 4,
+          "rejected": 0,
+          "unavailable": 0,
+          "coverage": 1.0,
+          "correct_among_accepted": 0.5,
+          "accepted_semantic_wrong": 4,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "source_gate": {
+          "accepted_correct": 4,
+          "accepted_wrong": 0,
+          "rejected": 4,
+          "unavailable": 0,
+          "coverage": 0.5,
+          "correct_among_accepted": 1.0,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        }
+      }
+    },
+    "raw_evidence": {
+      "initiated": 8,
+      "delivered": 8,
+      "strict_wire_json": 8,
+      "strict_contract": 5,
+      "decoded_schema_valid": 5,
+      "semantic_correct": 4,
+      "semantic_wrong": 4,
+      "semantic_unscorable": 0,
+      "binding_applicable": 8,
+      "binding_correct": 4,
+      "joint_correct": 3,
+      "pipelines": {
+        "decoded_schema": {
+          "accepted_correct": 3,
+          "accepted_wrong": 2,
+          "rejected": 3,
+          "unavailable": 0,
+          "coverage": 0.625,
+          "correct_among_accepted": 0.6,
+          "accepted_semantic_wrong": 1,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 2
+        },
+        "strict_contract": {
+          "accepted_correct": 3,
+          "accepted_wrong": 2,
+          "rejected": 3,
+          "unavailable": 0,
+          "coverage": 0.625,
+          "correct_among_accepted": 0.6,
+          "accepted_semantic_wrong": 1,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 2
+        },
+        "source_gate": {
+          "accepted_correct": 3,
+          "accepted_wrong": 0,
+          "rejected": 5,
+          "unavailable": 0,
+          "coverage": 0.375,
+          "correct_among_accepted": 1.0,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        }
+      }
+    }
+  },
+  "by_group": {
+    "absent_target": {
+      "initiated": 8,
+      "delivered": 8,
+      "strict_wire_json": 8,
+      "strict_contract": 5,
+      "decoded_schema_valid": 5,
+      "semantic_correct": 0,
+      "semantic_wrong": 8,
+      "semantic_unscorable": 0,
+      "binding_applicable": 4,
+      "binding_correct": 1,
+      "joint_correct": 0,
+      "pipelines": {
+        "decoded_schema": {
+          "accepted_correct": 0,
+          "accepted_wrong": 5,
+          "rejected": 3,
+          "unavailable": 0,
+          "coverage": 0.625,
+          "correct_among_accepted": 0.0,
+          "accepted_semantic_wrong": 5,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 1
+        },
+        "strict_contract": {
+          "accepted_correct": 0,
+          "accepted_wrong": 5,
+          "rejected": 3,
+          "unavailable": 0,
+          "coverage": 0.625,
+          "correct_among_accepted": 0.0,
+          "accepted_semantic_wrong": 5,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 1
+        },
+        "source_gate": {
+          "accepted_correct": 0,
+          "accepted_wrong": 0,
+          "rejected": 8,
+          "unavailable": 0,
+          "coverage": 0.0,
+          "correct_among_accepted": null,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        }
+      }
+    },
+    "explicit_unknown": {
+      "initiated": 8,
+      "delivered": 8,
+      "strict_wire_json": 8,
+      "strict_contract": 4,
+      "decoded_schema_valid": 4,
+      "semantic_correct": 1,
+      "semantic_wrong": 7,
+      "semantic_unscorable": 0,
+      "binding_applicable": 4,
+      "binding_correct": 0,
+      "joint_correct": 0,
+      "pipelines": {
+        "decoded_schema": {
+          "accepted_correct": 0,
+          "accepted_wrong": 4,
+          "rejected": 4,
+          "unavailable": 0,
+          "coverage": 0.5,
+          "correct_among_accepted": 0.0,
+          "accepted_semantic_wrong": 4,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "strict_contract": {
+          "accepted_correct": 0,
+          "accepted_wrong": 4,
+          "rejected": 4,
+          "unavailable": 0,
+          "coverage": 0.5,
+          "correct_among_accepted": 0.0,
+          "accepted_semantic_wrong": 4,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "source_gate": {
+          "accepted_correct": 0,
+          "accepted_wrong": 0,
+          "rejected": 8,
+          "unavailable": 0,
+          "coverage": 0.0,
+          "correct_among_accepted": null,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        }
+      }
+    },
+    "observed_positive": {
+      "initiated": 8,
+      "delivered": 8,
+      "strict_wire_json": 8,
+      "strict_contract": 5,
+      "decoded_schema_valid": 5,
+      "semantic_correct": 7,
+      "semantic_wrong": 1,
+      "semantic_unscorable": 0,
+      "binding_applicable": 4,
+      "binding_correct": 2,
+      "joint_correct": 5,
+      "pipelines": {
+        "decoded_schema": {
+          "accepted_correct": 5,
+          "accepted_wrong": 0,
+          "rejected": 3,
+          "unavailable": 0,
+          "coverage": 0.625,
+          "correct_among_accepted": 1.0,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "strict_contract": {
+          "accepted_correct": 5,
+          "accepted_wrong": 0,
+          "rejected": 3,
+          "unavailable": 0,
+          "coverage": 0.625,
+          "correct_among_accepted": 1.0,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        },
+        "source_gate": {
+          "accepted_correct": 5,
+          "accepted_wrong": 0,
+          "rejected": 3,
+          "unavailable": 0,
+          "coverage": 0.625,
+          "correct_among_accepted": 1.0,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        }
+      }
+    },
+    "observed_zero": {
+      "initiated": 8,
+      "delivered": 8,
+      "strict_wire_json": 8,
+      "strict_contract": 6,
+      "decoded_schema_valid": 6,
+      "semantic_correct": 8,
+      "semantic_wrong": 0,
+      "semantic_unscorable": 0,
+      "binding_applicable": 4,
+      "binding_correct": 1,
+      "joint_correct": 5,
+      "pipelines": {
+        "decoded_schema": {
+          "accepted_correct": 5,
+          "accepted_wrong": 1,
+          "rejected": 2,
+          "unavailable": 0,
+          "coverage": 0.75,
+          "correct_among_accepted": 0.8333333333333334,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 1
+        },
+        "strict_contract": {
+          "accepted_correct": 5,
+          "accepted_wrong": 1,
+          "rejected": 2,
+          "unavailable": 0,
+          "coverage": 0.75,
+          "correct_among_accepted": 0.8333333333333334,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 1
+        },
+        "source_gate": {
+          "accepted_correct": 5,
+          "accepted_wrong": 0,
+          "rejected": 3,
+          "unavailable": 0,
+          "coverage": 0.625,
+          "correct_among_accepted": 1.0,
+          "accepted_semantic_wrong": 0,
+          "accepted_semantic_unscorable": 0,
+          "accepted_format_only": 0,
+          "accepted_binding_wrong": 0
+        }
+      }
+    }
+  },
+  "by_arm_and_group": {
+    "schema_evidence": {
+      "absent_target": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 0,
+        "decoded_schema_valid": 0,
+        "semantic_correct": 0,
+        "semantic_wrong": 2,
+        "semantic_unscorable": 0,
+        "binding_applicable": 2,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "explicit_unknown": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 0,
+        "decoded_schema_valid": 0,
+        "semantic_correct": 1,
+        "semantic_wrong": 1,
+        "semantic_unscorable": 0,
+        "binding_applicable": 2,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "observed_positive": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 0,
+        "decoded_schema_valid": 0,
+        "semantic_correct": 2,
+        "semantic_wrong": 0,
+        "semantic_unscorable": 0,
+        "binding_applicable": 2,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "observed_zero": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 0,
+        "decoded_schema_valid": 0,
+        "semantic_correct": 2,
+        "semantic_wrong": 0,
+        "semantic_unscorable": 0,
+        "binding_applicable": 2,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      }
+    },
+    "raw_no_evidence": {
+      "absent_target": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 0,
+        "semantic_wrong": 2,
+        "semantic_unscorable": 0,
+        "binding_applicable": 0,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 2,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 2,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 2,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 2,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "explicit_unknown": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 0,
+        "semantic_wrong": 2,
+        "semantic_unscorable": 0,
+        "binding_applicable": 0,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 2,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 2,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 2,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 2,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "observed_positive": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 1,
+        "decoded_schema_valid": 1,
+        "semantic_correct": 1,
+        "semantic_wrong": 1,
+        "semantic_unscorable": 0,
+        "binding_applicable": 0,
+        "binding_correct": 0,
+        "joint_correct": 1,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "rejected": 1,
+            "unavailable": 0,
+            "coverage": 0.5,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "rejected": 1,
+            "unavailable": 0,
+            "coverage": 0.5,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "rejected": 1,
+            "unavailable": 0,
+            "coverage": 0.5,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "observed_zero": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 2,
+        "semantic_wrong": 0,
+        "semantic_unscorable": 0,
+        "binding_applicable": 0,
+        "binding_correct": 0,
+        "joint_correct": 2,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      }
+    },
+    "schema_no_evidence": {
+      "absent_target": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 0,
+        "semantic_wrong": 2,
+        "semantic_unscorable": 0,
+        "binding_applicable": 0,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 2,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 2,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 2,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 2,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "explicit_unknown": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 0,
+        "semantic_wrong": 2,
+        "semantic_unscorable": 0,
+        "binding_applicable": 0,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 2,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 2,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 2,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 2,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "observed_positive": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 2,
+        "semantic_wrong": 0,
+        "semantic_unscorable": 0,
+        "binding_applicable": 0,
+        "binding_correct": 0,
+        "joint_correct": 2,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "observed_zero": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 2,
+        "semantic_wrong": 0,
+        "semantic_unscorable": 0,
+        "binding_applicable": 0,
+        "binding_correct": 0,
+        "joint_correct": 2,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      }
+    },
+    "raw_evidence": {
+      "absent_target": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 1,
+        "decoded_schema_valid": 1,
+        "semantic_correct": 0,
+        "semantic_wrong": 2,
+        "semantic_unscorable": 0,
+        "binding_applicable": 2,
+        "binding_correct": 1,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 1,
+            "rejected": 1,
+            "unavailable": 0,
+            "coverage": 0.5,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 1,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 1
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 1,
+            "rejected": 1,
+            "unavailable": 0,
+            "coverage": 0.5,
+            "correct_among_accepted": 0.0,
+            "accepted_semantic_wrong": 1,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 1
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "explicit_unknown": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 0,
+        "decoded_schema_valid": 0,
+        "semantic_correct": 0,
+        "semantic_wrong": 2,
+        "semantic_unscorable": 0,
+        "binding_applicable": 2,
+        "binding_correct": 0,
+        "joint_correct": 0,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 0,
+            "accepted_wrong": 0,
+            "rejected": 2,
+            "unavailable": 0,
+            "coverage": 0.0,
+            "correct_among_accepted": null,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "observed_positive": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 2,
+        "semantic_wrong": 0,
+        "semantic_unscorable": 0,
+        "binding_applicable": 2,
+        "binding_correct": 2,
+        "joint_correct": 2,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "strict_contract": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          },
+          "source_gate": {
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      },
+      "observed_zero": {
+        "initiated": 2,
+        "delivered": 2,
+        "strict_wire_json": 2,
+        "strict_contract": 2,
+        "decoded_schema_valid": 2,
+        "semantic_correct": 2,
+        "semantic_wrong": 0,
+        "semantic_unscorable": 0,
+        "binding_applicable": 2,
+        "binding_correct": 1,
+        "joint_correct": 1,
+        "pipelines": {
+          "decoded_schema": {
+            "accepted_correct": 1,
+            "accepted_wrong": 1,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.5,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 1
+          },
+          "strict_contract": {
+            "accepted_correct": 1,
+            "accepted_wrong": 1,
+            "rejected": 0,
+            "unavailable": 0,
+            "coverage": 1.0,
+            "correct_among_accepted": 0.5,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 1
+          },
+          "source_gate": {
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "rejected": 1,
+            "unavailable": 0,
+            "coverage": 0.5,
+            "correct_among_accepted": 1.0,
+            "accepted_semantic_wrong": 0,
+            "accepted_semantic_unscorable": 0,
+            "accepted_format_only": 0,
+            "accepted_binding_wrong": 0
+          }
+        }
+      }
+    }
+  },
+  "direct_baseline": [
+    {
+      "input_id": "T01",
+      "contract": "no_evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T01",
+      "contract": "evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T02",
+      "contract": "no_evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T02",
+      "contract": "evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T03",
+      "contract": "no_evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T03",
+      "contract": "evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T04",
+      "contract": "no_evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T04",
+      "contract": "evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T05",
+      "contract": "no_evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T05",
+      "contract": "evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T06",
+      "contract": "no_evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T06",
+      "contract": "evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T07",
+      "contract": "no_evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T07",
+      "contract": "evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T08",
+      "contract": "no_evidence",
+      "matches_manual_expectation": true
+    },
+    {
+      "input_id": "T08",
+      "contract": "evidence",
+      "matches_manual_expectation": true
+    }
+  ],
+  "competence_gate": {
+    "passed": false,
+    "provenance_ok": true,
+    "summary_inventory_matches": true,
+    "usage_matches": true,
+    "all_32_complete_in_order": true,
+    "direct_baseline_all_16": true,
+    "designated_joint_correct": 0,
+    "designated_unknown_absent_correct": 0,
+    "content_threshold_passed": false,
+    "next_framing_phase": "NOT_AUTHORIZED_OR_AUTOMATICALLY_LAUNCHED"
+  },
+  "rows": [
+    {
+      "request_id": "BF01C-T01-schema_evidence",
+      "input_id": "T01",
+      "group": "observed_zero",
+      "arm": "schema_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T01-raw_no_evidence",
+      "input_id": "T01",
+      "group": "observed_zero",
+      "arm": "raw_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T01-schema_no_evidence",
+      "input_id": "T01",
+      "group": "observed_zero",
+      "arm": "schema_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T01-raw_evidence",
+      "input_id": "T01",
+      "group": "observed_zero",
+      "arm": "raw_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": false,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "evidence_row_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": true
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": true
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T02-raw_no_evidence",
+      "input_id": "T02",
+      "group": "observed_zero",
+      "arm": "raw_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T02-schema_no_evidence",
+      "input_id": "T02",
+      "group": "observed_zero",
+      "arm": "schema_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T02-raw_evidence",
+      "input_id": "T02",
+      "group": "observed_zero",
+      "arm": "raw_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": true,
+      "binding_applicable": true,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T02-schema_evidence",
+      "input_id": "T02",
+      "group": "observed_zero",
+      "arm": "schema_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T03-schema_no_evidence",
+      "input_id": "T03",
+      "group": "observed_positive",
+      "arm": "schema_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T03-raw_evidence",
+      "input_id": "T03",
+      "group": "observed_positive",
+      "arm": "raw_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": true,
+      "binding_applicable": true,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T03-schema_evidence",
+      "input_id": "T03",
+      "group": "observed_positive",
+      "arm": "schema_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T03-raw_no_evidence",
+      "input_id": "T03",
+      "group": "observed_positive",
+      "arm": "raw_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T04-raw_evidence",
+      "input_id": "T04",
+      "group": "observed_positive",
+      "arm": "raw_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": true,
+      "binding_applicable": true,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T04-schema_evidence",
+      "input_id": "T04",
+      "group": "observed_positive",
+      "arm": "schema_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T04-raw_no_evidence",
+      "input_id": "T04",
+      "group": "observed_positive",
+      "arm": "raw_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T04-schema_no_evidence",
+      "input_id": "T04",
+      "group": "observed_positive",
+      "arm": "schema_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": true,
+      "source_gate_reason": "source_consistent",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "accepted_correct",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T05-schema_evidence",
+      "input_id": "T05",
+      "group": "explicit_unknown",
+      "arm": "schema_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T05-raw_no_evidence",
+      "input_id": "T05",
+      "group": "explicit_unknown",
+      "arm": "raw_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "source_semantics_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T05-schema_no_evidence",
+      "input_id": "T05",
+      "group": "explicit_unknown",
+      "arm": "schema_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "source_semantics_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T05-raw_evidence",
+      "input_id": "T05",
+      "group": "explicit_unknown",
+      "arm": "raw_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": false,
+      "binding_correct": false,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T06-raw_no_evidence",
+      "input_id": "T06",
+      "group": "explicit_unknown",
+      "arm": "raw_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "source_semantics_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T06-schema_no_evidence",
+      "input_id": "T06",
+      "group": "explicit_unknown",
+      "arm": "schema_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "source_semantics_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T06-raw_evidence",
+      "input_id": "T06",
+      "group": "explicit_unknown",
+      "arm": "raw_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": false,
+      "binding_correct": false,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T06-schema_evidence",
+      "input_id": "T06",
+      "group": "explicit_unknown",
+      "arm": "schema_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": true,
+      "binding_correct": null,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T07-schema_no_evidence",
+      "input_id": "T07",
+      "group": "absent_target",
+      "arm": "schema_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "source_semantics_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T07-raw_evidence",
+      "input_id": "T07",
+      "group": "absent_target",
+      "arm": "raw_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": false,
+      "binding_correct": true,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T07-schema_evidence",
+      "input_id": "T07",
+      "group": "absent_target",
+      "arm": "schema_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T07-raw_no_evidence",
+      "input_id": "T07",
+      "group": "absent_target",
+      "arm": "raw_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "source_semantics_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T08-raw_evidence",
+      "input_id": "T08",
+      "group": "absent_target",
+      "arm": "raw_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": false,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "evidence_row_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": true
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": true
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T08-schema_evidence",
+      "input_id": "T08",
+      "group": "absent_target",
+      "arm": "schema_evidence",
+      "contract": "evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": false,
+      "decoded_schema_valid": false,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": true,
+      "joint_correct": false,
+      "source_gate_reason": "invalid_response_structure",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T08-raw_no_evidence",
+      "input_id": "T08",
+      "group": "absent_target",
+      "arm": "raw_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "source_semantics_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    },
+    {
+      "request_id": "BF01C-T08-schema_no_evidence",
+      "input_id": "T08",
+      "group": "absent_target",
+      "arm": "schema_no_evidence",
+      "contract": "no_evidence",
+      "delivered": true,
+      "strict_wire_json": true,
+      "strict_contract": true,
+      "decoded_schema_valid": true,
+      "semantic_correct": false,
+      "binding_correct": null,
+      "binding_applicable": false,
+      "joint_correct": false,
+      "source_gate_reason": "source_semantics_mismatch",
+      "pipelines": {
+        "decoded_schema": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "strict_contract": {
+          "outcome": "accepted_wrong",
+          "accepted_semantic_wrong": true,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        },
+        "source_gate": {
+          "outcome": "rejected",
+          "accepted_semantic_wrong": false,
+          "accepted_semantic_unscorable": false,
+          "accepted_format_only": false,
+          "accepted_binding_wrong": false
+        }
+      }
+    }
+  ],
+  "saved_evidence_verification": {
+    "initiations": 32,
+    "raw_request_response_pairs": 32,
+    "envelope_replay": "MATCHED_RETAINED_BYTES",
+    "authenticity_claim": false
+  }
+}

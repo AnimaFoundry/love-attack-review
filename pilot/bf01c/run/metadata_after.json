@@ -1,0 +1,20 @@
+{
+  "tag": "qwen2.5:1.5b-instruct-q4_K_M",
+  "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+  "size_bytes": 986061892,
+  "server_version": "0.40.10",
+  "template_sha256": "eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+  "system_sha256": "66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+  "parameters": "",
+  "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "qwen2",
+    "families": [
+      "qwen2"
+    ],
+    "parameter_size": "1.5B",
+    "quantization_level": "Q4_K_M"
+  },
+  "license_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+}

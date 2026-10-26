@@ -19,7 +19,18 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = "RELEASE_MANIFEST.json"
+PUBLICATION_VERSION = "1.3.0"
 GENERATED = ("paper.md", "paper.pdf", "figures/framing_evaluation.svg")
+BF01C_FILES = {
+    "config.json", "tasks.json", "requests.json", "PLAN.md", "PRE_RUN_REVIEW.md",
+    "REPORT.md", "FREEZE.json", "RUN_GUARD.json", "prepare_study.py", "score.py",
+    "contracts.py", "evidence_gate.py", "envelope.py", "freeze.py", "run_local.py",
+    "verify_saved.py", "test_saved.py", "test_runtime.py", "test_score.py", "test_deadline.py",
+    "test_contracts.py", "test_evidence_gate.py", "fixtures.json",
+    "schema_no_evidence.json", "schema_evidence.json", "LICENSE-CODE", "LICENSE-TEXT",
+    "MODEL-LICENSE.txt", "model-template.txt", "run/initiation.jsonl",
+    "run/records.jsonl", "run/summary.json", "run/score.json",
+}
 REQUIRED_FILES = {
     "README.md", "manuscript.md", "references.json", "protocol.json",
     "EXPERIMENT_HANDOFF.md", "CITATION.cff", "citation.bib", "citation.csl.json",
@@ -28,6 +39,7 @@ REQUIRED_FILES = {
     "requirements.txt", "scripts/build_paper.py", "scripts/verify_metadata.py",
     "scripts/verify_artifacts.py", "tests/test_artifacts.py",
     ".github/workflows/validate.yml", *GENERATED,
+    *("pilot/bf01c/" + name for name in BF01C_FILES),
 }
 IGNORED_DIRS = {"build", "__pycache__", ".pytest_cache", ".git", ".venv"}
 PROTECTED_PARTS = {".auth", "input", "output", "exports", "quarantine"}
@@ -114,7 +126,7 @@ def public_inventory(root):
 
 def validate_manifest(root, manifest):
     require(isinstance(manifest, dict), "Manifest must be an object")
-    require(manifest.get("version") == "1.2.0", "Unexpected publication version")
+    require(manifest.get("version") == PUBLICATION_VERSION, "Unexpected publication version")
     require(manifest.get("self_excluded") is True, "Manifest must explicitly exclude itself")
     require(nonempty(manifest.get("scope")), "Manifest requires a truthful scope description")
     records = manifest.get("files")
@@ -376,7 +388,7 @@ def verify(root=ROOT, rebuild=None):
         compare_rebuild(root, rebuild)
     return {"manifest_files": count, "references": len(refs), "pdf_pages": pages,
             "prospective_studies": experiments, "article_v1_model_experiments_performed": False,
-            "pilot_companions_checked_separately": ["pilot/bf01/analyze.py --check", "pilot/bf01b/analyze.py --check"],
+            "pilot_companions_checked_separately": ["pilot/bf01/analyze.py --check", "pilot/bf01b/analyze.py --check", "pilot/bf01c/verify_saved.py --check"],
             "rebuild_byte_identical": rebuild is not None,
             "remote_urls_checked": False, "scientific_claim_validation": False}
 

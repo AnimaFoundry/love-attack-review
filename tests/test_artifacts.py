@@ -116,7 +116,7 @@ class FilesystemIntegrityTests(unittest.TestCase):
 
     def test_private_case_artifact_cannot_enter_manifest(self):
         with temporary_workspace() as directory:
-            manifest = {"version": "1.2.0", "scope": "Review and protocol", "self_excluded": True,
+            manifest = {"version": "1.3.0", "scope": "Review and protocol", "self_excluded": True,
                         "files": [{"path": "case-observation.json", "bytes": 0,
                                    "sha256": hashlib.sha256(b"").hexdigest()}]}
             with self.assertRaisesRegex(ValueError, "Excluded private-case"):
@@ -130,7 +130,7 @@ class FilesystemIntegrityTests(unittest.TestCase):
             root = Path(directory)
             (root / "paper.md").write_bytes(b"original\n")
             data = (root / "paper.md").read_bytes()
-            manifest = {"version": "1.2.0", "scope": "Test fixture", "self_excluded": True,
+            manifest = {"version": "1.3.0", "scope": "Test fixture", "self_excluded": True,
                         "files": [{"path": "paper.md", "bytes": len(data),
                                    "sha256": hashlib.sha256(data).hexdigest()}]}
             with patch.object(artifacts, "REQUIRED_FILES", {"paper.md"}):
@@ -142,6 +142,29 @@ class FilesystemIntegrityTests(unittest.TestCase):
                 (root / "paper.md").write_bytes(b"modified\n")
                 with self.assertRaisesRegex(ValueError, "mismatch"):
                     artifacts.validate_manifest(root, manifest)
+
+    def test_stale_publication_version_is_rejected(self):
+        with temporary_workspace() as directory:
+            with self.assertRaisesRegex(ValueError, "publication version"):
+                artifacts.validate_manifest(directory, {"version": "1.2.0"})
+
+    def test_bf01c_saved_evidence_is_required_for_the_new_package(self):
+        required = {"pilot/bf01c/verify_saved.py", "pilot/bf01c/FREEZE.json",
+                    "pilot/bf01c/RUN_GUARD.json", "pilot/bf01c/run/initiation.jsonl",
+                    "pilot/bf01c/run/records.jsonl", "pilot/bf01c/run/summary.json",
+                    "pilot/bf01c/run/score.json", "pilot/bf01c/REPORT.md"}
+        self.assertTrue(required <= artifacts.REQUIRED_FILES)
+
+    def test_workflow_validates_bf01c_saved_data_without_running_inference(self):
+        workflow = (ROOT / ".github/workflows/validate.yml").read_text(encoding="utf-8")
+        self.assertIn("python -m unittest discover -s pilot/bf01c -p 'test_*.py' -v", workflow)
+        self.assertIn("python pilot/bf01c/verify_saved.py --check", workflow)
+        self.assertNotIn("run_local.py --execute", workflow)
+        self.assertNotIn("ollama run", workflow)
+
+    def test_raw_bf01c_envelopes_are_exempt_from_text_normalization(self):
+        attributes = (ROOT / ".gitattributes").read_text(encoding="utf-8")
+        self.assertIn("pilot/bf01c/run/responses/*.bin -text", attributes.splitlines())
 
     def test_rebuild_detects_mismatch_and_extra_artifact(self):
         with temporary_workspace() as directory:

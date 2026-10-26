@@ -25,6 +25,32 @@ jobs:
       - run: python pilot/bf01/analyze.py pilot/bf01/run-001 --check
       - run: python -m unittest discover -s pilot/bf01b -p 'test_*.py' -v
       - run: python pilot/bf01b/analyze.py pilot/bf01b/run-001 --check
+      - name: Test BF-01C offline controls
+        run: python -m unittest discover -s pilot/bf01c -p 'test_*.py' -v
+      - name: Verify BF-01C saved responses without inference
+        run: python pilot/bf01c/verify_saved.py --check
       - run: python scripts/verify_artifacts.py
       - run: python scripts/build_paper.py --output-dir build/reproduced
       - run: python scripts/verify_artifacts.py --rebuild build/reproduced
+  publish_bf01c:
+    needs: reproduce
+    if: >-
+      github.repository == 'AnimaFoundry/love-attack-review' &&
+      github.event_name == 'push' && github.ref == 'refs/heads/main' &&
+      startsWith(github.event.head_commit.message, 'Release BF-01C companion v1.3.0')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    concurrency:
+      group: publish-bf01c-v1.3.0
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Publish the validated exact commit
+        run: python scripts/publish_companion.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

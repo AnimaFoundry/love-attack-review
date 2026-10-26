@@ -1,6 +1,6 @@
 # Source and rights ledger
 
-Companion package 1.2.0 · Manuscript 1.0.0 · 24 October 2026
+Companion package 1.3.0 · Manuscript 1.0.0 · 26 October 2026
 
 | Material | Origin | License / publication boundary |
 |---|---|---|
@@ -31,6 +31,24 @@ The 13-file pre-inference freeze covers the synthetic task set, design, schedule
 Only original synthetic inputs are used. No individual conversation case, screenshot, private transcript, external customer record or third-party benchmark is included. Model output is preserved as output, not attributed to a human participant or promoted to independently verified truth. The package's CC BY 4.0 license covers the project's original text and data compilation; it does not relicense the model or assert rights over any third-party material a model might produce. Reuse must retain applicable notices and source attribution. Actual observations and exclusions belong to [the pilot report](pilot/bf01/REPORT.md).
 
 ## Scope of legal and evidence statements
+
+BF-01C adds eight newly authored synthetic records in one explicit complete-record
+grammar, four output conditions, and original collection/replay/scoring controls.
+Its source parser and contract checks adapt this project's MIT offline preflight;
+they do not copy a third-party factuality system or benchmark. Original code is
+MIT, and original design/text/data compilation is CC BY 4.0. Raw machine replies
+and factual measurements carry the same provenance boundary as the older pilots;
+no exclusive copyright in machine output is asserted. The exact existing model
+template and full Apache-2.0 notice are retained, without weights. The source
+gate and deterministic baseline share parsing code; this is neither an
+independently invented algorithm nor a generally validated truth verifier.
+Structured generation follows the official [Ollama structured-output
+interface](https://docs.ollama.com/capabilities/structured-outputs), and ordinary
+schema checks use the already pinned jsonschema dependency. No private case or
+private-derived identifier, count, narrative or link is included. Publication
+automation uses the repository's built-in short-lived token in a restricted job;
+tokens are never included in research artifacts. Actual results and limitations
+are in [the BF-01C report](pilot/bf01c/REPORT.md).
 
 BF-01B adds newly authored synthetic source encodings, competing supplemental
 requests and an original four-lane validator/analysis implementation. The runner,

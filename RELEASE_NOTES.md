@@ -1,50 +1,10 @@
-# Companion package 1.2.0
+BF-01C adds a retained negative/mixed developmental feasibility study of source-state correctness and output contracts. The original v1.0.0 review/PDF and the earlier BF-01/BF-01B evidence remain unchanged.
 
-Add BF-01B: original synthetic content-integrity stress tests and four fixed
-offline output-processing baselines. See [the new report](pilot/bf01b/REPORT.md)
-for the actual retained outcomes, rather than treating the planned 168 cases as
-completed observations. The original manuscript, first pilot and prior tags
-remain unchanged.
+- One frozen cohort: 8 new original synthetic records × 4 conditions; 32/32 local calls completed, 1,114 output tokens, 61.719 seconds, USD 0 external API fees. No retries, new model download or private case.
+- All replies were strict JSON. Schema without evidence was structurally valid in 8/8 cases but state/value correct in 4/8. Schema with evidence omitted four required evidence identity fields in every reply: 0/8 joint usable answers, despite 5/8 correct state/value pairs. This is observed model/runtime/schema nonconformance; its component-level cause is not established.
+- Ordinary structural checks accepted 10 correct and 10 wrong outputs. Source checking accepted 10 correct, no wrong, and rejected 22 (31.25% coverage). Deterministic source lookup already solved all 8 records under both contracts; no general truth-verification or novel-product claim follows.
+- The predesignated competence gate failed. No social-framing phase or additional inference follows automatically. All positive and negative raw evidence, the 26-file freeze and the bounded execution ledger are retained.
 
-The cohort did complete all 168 calls, with no retries, truncations or transport
-errors. All strict raw replies failed format. Fence parsing recovered 78 correct
-answers and single-object extraction recovered one more. Extraction plus schema
-accepted 79 correct and 87 wrong objects, rejecting two; schema added no error
-interception. Relational versus plain-format arms each had 13 wrong accepts;
-legitimacy versus plain-default arms had 13 versus 14. Baseline errors and a raw
-score floor prevent interpreting pooled failures as successful emotional attacks.
+The release workflow requires clean Ubuntu offline tests, saved-response replay, publication-integrity checks and a byte-identical rebuild of the original paper before publishing this exact main-branch commit. These checks do not constitute a second model run or a separate tag-triggered CI run. The release tag is checked against the validated commit; the exact public inventory and SHA-256 hashes are in `RELEASE_MANIFEST.json`.
 
-The new design distinguishes format recovery, rejection/abstention and accepted
-factual error. Seven arms include plain requests matched to social wording;
-24 instances cover six representations of one semantic operation. All inputs,
-strategies, validators, scoring and the finite budget are frozen before collection.
-It targets content usefulness and source-state truth, not performance faults.
-No private case, new model download, paid API or outcome-driven prompt revision.
-The 128-token/call, 168-call and 20-minute global ceilings are safeguards.
-
-Offline tests and saved-output replay are added to Ubuntu CI. They do not repeat
-model inference or validate a universal defense. The two studies are developmental
-companions, not completion of the broader prospective research cards.
-
-# Companion package 1.1.0
-
-BF-01 developmental feasibility companion, 24 October 2026. The manuscript, PDF and historical prospective protocol remain at version 1.0.0; the original tag is preserved.
-
-- Add 12 original synthetic task instances in four authored template families, a six-condition schedule, strict JSON scoring and a bounded local-only runner.
-- Record the exact Qwen2.5-1.5B-Instruct Q4_K_M model configuration, model template and complete Apache-2.0 license. No model weights are redistributed.
-- Freeze 13 task/source/plan/review/license files before inference and retain raw outcomes, attempt records and offline analysis separately. See [REPORT.md](pilot/bf01/REPORT.md) for actual execution status and observations; the planned 72 calls are not a claim that all calls completed.
-- Add offline scorer/transport tests and raw-evidence analysis to publication validation. Ubuntu CI does not download a model or perform inference. Reproducing the saved summary is distinct from executing the model again.
-
-The frozen ceiling is 72 calls, temperature 0, 512 generated tokens per call, one concurrent call, 120 seconds per call, 40 minutes total inference time and USD 0 external API expenditure, with no retries or auxiliary inference. The authorized model download is approximately 1 GB. Counterbalancing is deterministic; framing contrasts are descriptive and input lengths are not exactly tokenizer-matched. Four convenience-authored families and one quantized model do not support a powered confirmatory conclusion, equivalence, general robustness or a new attack mechanism.
-
-The BF-01 companion is a limited development study, not completion of the broader historical BF-01 protocol. BF-02, BF-03 and BF-04 remain prospective. No individual conversation case, private transcript, active jailbreak payload, propagation mechanism or service-load experiment is included. Live repetition requires a separately reviewed budget and an unused destination; it is not part of an ordinary offline rebuild.
-
-# Version 1.0.0
-
-Initial English research preprint and companion package, 24 October 2026.
-
-- Selective critical integrative review of 17 sources, with claim-level limitations.
-- Four prospective experiment cards, including separate semantic-framing and repeated-symbol controls.
-- PDF, readable Markdown, citation metadata, deterministic publication builder, and integrity checks.
-
-No controlled model experiment, power analysis, preregistration, validated defense, or new attack mechanism is reported. No individual conversation case or private transcript is included. Version and artifact verification concern this publication package, not empirical confirmation of its hypotheses.
+See [BF-01C report](https://github.com/AnimaFoundry/love-attack-review/blob/v1.3.0/pilot/bf01c/REPORT.md), [fixed plan](https://github.com/AnimaFoundry/love-attack-review/blob/v1.3.0/pilot/bf01c/PLAN.md) and [saved scores](https://github.com/AnimaFoundry/love-attack-review/blob/v1.3.0/pilot/bf01c/run/score.json). Original text/data compilation are CC BY 4.0; code is MIT; the full model Apache-2.0 notice is retained without redistributing weights. This developmental companion is not peer reviewed and establishes no framing-specific causal mechanism or general defense.

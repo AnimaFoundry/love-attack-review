@@ -1,9 +1,9 @@
 # Compassion and Legitimacy Framing in LLM Systems
 
 **Evidence, Threat Boundaries, and a Controlled Evaluation Protocol**  
-AnimaFoundry · Companion package 1.2.0 · Manuscript 1.0.0 · 24 October 2026
+AnimaFoundry · Companion package 1.3.0 · Manuscript 1.0.0 · 26 October 2026
 
-A selective critical integrative review and a prospective benign evaluation protocol. **The manuscript is an unchanged research preprint, not peer reviewed.** Package 1.2.0 adds a second original-synthetic content-integrity study, BF-01B, alongside the retained BF-01 feasibility pilot. Actual execution and observations are reported in the [new content-integrity report](pilot/bf01b/REPORT.md) and [first pilot report](pilot/bf01/REPORT.md), not retroactively inserted into the paper. No validated defense or confirmatory framing result is claimed.
+A selective critical integrative review and a prospective benign evaluation protocol. **The manuscript is an unchanged research preprint, not peer reviewed.** Package 1.3.0 adds BF-01C, a task-only comparison of source-state correctness, output contracts and schema-constrained generation. Its [negative and mixed findings](pilot/bf01c/REPORT.md) accompany the retained [BF-01B report](pilot/bf01b/REPORT.md) and [first pilot report](pilot/bf01/REPORT.md); they are not retroactively inserted into the paper. No validated general defense or confirmatory framing result is claimed.
 
 The informal project label *The Love Attack* names the originating question. It is not a demonstrated new exploit or an established attack class.
 
@@ -17,6 +17,9 @@ The informal project label *The Love Attack* names the originating question. It 
 Suggested citation: AnimaFoundry. (2026). *Compassion and Legitimacy Framing in LLM Systems: Evidence, Threat Boundaries, and a Controlled Evaluation Protocol* (Version 1.0.0) [Preprint]. https://github.com/AnimaFoundry/love-attack-review
 
 For observations from BF-01 or BF-01B, cite the corresponding pilot report and the [version 1.2.0 companion release](https://github.com/AnimaFoundry/love-attack-review/releases/tag/v1.2.0). The unchanged version 1.0.0 manuscript does not contain these pilot results.
+
+For BF-01C, cite its [report](pilot/bf01c/REPORT.md) and the
+[version 1.3.0 companion](https://github.com/AnimaFoundry/love-attack-review/releases/tag/v1.3.0).
 
 ## What this paper contributes
 
@@ -33,6 +36,56 @@ It separates useful emotional adaptation, task-contract failure, evaluator manip
 | BF-04 | Does an effect depend on retained context or an explicit toy-memory channel? | NOT_PERFORMED |
 
 The original [EXPERIMENT_HANDOFF.md](EXPERIMENT_HANDOFF.md) and [protocol.json](protocol.json) remain historical prospective documents. Their `NOT_PERFORMED` statuses and unfrozen confirmatory designs are preserved. The retained BF-01 feasibility companion is a narrower developmental study; it does not complete the broad prospective card or change the status of BF-02, BF-03 or BF-04.
+
+### BF-01C: task-only source-state and output-contract feasibility
+
+Read the [report](pilot/bf01c/REPORT.md), [fixed plan](pilot/bf01c/PLAN.md),
+[pre-run review](pilot/bf01c/PRE_RUN_REVIEW.md), [26-file freeze](pilot/bf01c/FREEZE.json),
+[collection ledger](pilot/bf01c/run/summary.json) and
+[machine-readable scores](pilot/bf01c/run/score.json).
+
+Eight new original synthetic complete records were each sent in four conditions.
+All **32/32** local calls completed once, using **1,114 output tokens in 61.719
+seconds**, with **USD 0 external API fees**, no retries and no new model download.
+The frozen ceilings were 32 calls, 8,192 tokens, 600 seconds total and 30 seconds
+per call. The first schema compatibility observation counted toward the budget.
+All raw request/response bytes are retained. No private case was used.
+
+| Condition | Strict contract valid | State/value correct | Joint usable answer |
+| --- | ---: | ---: | ---: |
+| Schema + evidence | 0/8 | 5/8 | 0/8 |
+| Raw, no evidence | 7/8 | 3/8 | 3/8 |
+| Schema, no evidence | 8/8 | 4/8 | 4/8 |
+| Raw + evidence | 5/8 | 4/8 | 3/8 |
+
+All 32 replies were valid strict JSON. The schema-evidence condition nevertheless
+omitted four mandatory evidence identity fields in all eight replies. This is
+observed contract nonconformance in the model/runtime/schema combination; this
+study does not isolate which component caused it. Successful API completion is
+not evidence that every schema constraint was enforced. Its 0/8 joint score must
+not be described as eight semantic state errors.
+
+Structural validation accepted 10 correct and 10 wrong outputs, rejecting 12.
+Source-consistency checking accepted 10 correct and no wrong outputs, rejecting
+22: **31.25% coverage**, not a solution that supplies every answer. Deterministic
+lookup already answered all eight sources correctly under both contracts. The
+source gate and baseline share parsing code and apply only to this explicit
+synthetic grammar; neither establishes external-world truth.
+
+The predesignated schema-evidence competence gate **failed**. No joint-usable
+unknown/absent answer was observed in any arm. Social-framing experiments stop
+here; no new inference is automatically launched. This is one small development
+cohort, not an emotional-attack success rate, general model comparison or product
+novelty claim. Any later schema-compatibility work requires a new fixed scope and
+budget; this consumed cohort cannot become a holdout.
+
+```sh
+python -m unittest discover -s pilot/bf01c -p 'test_*.py' -v
+python pilot/bf01c/verify_saved.py --check
+```
+
+These commands use saved evidence only. The live runner has a one-run guard and
+must not be rerun or have its guard removed to reset this research budget.
 
 ### BF-01B: content usefulness, correctness and trustworthiness
 
@@ -124,6 +177,8 @@ python pilot/bf01/analyze.py pilot/bf01/run-001 --check
 python scripts/verify_metadata.py
 python -m unittest discover -s pilot/bf01b -p 'test_*.py' -v
 python pilot/bf01b/analyze.py pilot/bf01b/run-001 --check
+python -m unittest discover -s pilot/bf01c -p 'test_*.py' -v
+python pilot/bf01c/verify_saved.py --check
 python scripts/build_paper.py --output-dir build/reproduced
 python scripts/verify_artifacts.py --rebuild-dir build/reproduced
 ```

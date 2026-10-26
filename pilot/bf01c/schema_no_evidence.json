@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Copyright 2026 AnimaFoundry. MIT; see LICENSE-CODE. Decoded-value shape only; contracts.py additionally enforces exact bytes, UTF-8, no BOM, byte limit, unique JSON members, Unicode scalar validity and lexical integers. No runtime/model compatibility has been tested.",
+  "title": "BF-01C no-evidence response shape",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["state", "value"],
+  "properties": {
+    "state": {"enum": ["observed", "unknown", "absent"]},
+    "value": {"type": ["integer", "null"], "minimum": -2147483648, "maximum": 2147483647}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "state": {"const": "observed"},
+        "value": {"type": "integer"}
+      }
+    },
+    {
+      "properties": {
+        "state": {"enum": ["unknown", "absent"]},
+        "value": {"type": "null"}
+      }
+    }
+  ]
+}

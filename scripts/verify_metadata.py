@@ -18,14 +18,15 @@ REPOSITORY = "https://github.com/AnimaFoundry/love-attack-review"
 ARTICLE_TITLE = "Compassion and Legitimacy Framing in LLM Systems: Evidence, Threat Boundaries, and a Controlled Evaluation Protocol"
 SOFTWARE_TITLE = "Compassion and Legitimacy Framing Review: Publication Software"
 CITATION_KEY = "AnimaFoundry2026CompassionFraming"
-SOFTWARE_VERSION = "1.2.0"
+SOFTWARE_VERSION = "1.3.0"
 ARTICLE_VERSION = "1.0.0"
-RELEASE_DATE = "2026-10-24"
+SOFTWARE_RELEASE_DATE = "2026-10-26"
+ARTICLE_RELEASE_DATE = "2026-10-24"
 SCHEMA_SHA256 = "17bc7993c67b95eec988dadca78b65cb29cd489d1fceba71040a141dfb9791df"
 LICENSE_SHA256 = "d26e56663498f0f17dbcb8a9bd50d344828948be08265f4fc97b4fc612e9be71"
 UPSTREAM_COMMIT = "dd51afe18fe23b4daaaf923d305e3046415b2c7c"
 ARTICLE_URL = REPOSITORY + "/blob/v1.0.0/paper.md"
-SOFTWARE_URL = REPOSITORY + "/releases/tag/v1.2.0"
+SOFTWARE_URL = REPOSITORY + "/releases/tag/v" + SOFTWARE_VERSION
 ARTICLE_NOTE = (
     "Critical integrative review and prospective evaluation protocol; not peer reviewed. "
     "No original controlled model experiment, power analysis, or defense-effectiveness "
@@ -109,7 +110,7 @@ def validate_cff(document, schema):
     for key, expected in {
         "cff-version": "1.2.0", "type": "software", "title": SOFTWARE_TITLE,
         "authors": [{"name": "AnimaFoundry"}], "version": SOFTWARE_VERSION,
-        "date-released": RELEASE_DATE, "url": SOFTWARE_URL,
+        "date-released": SOFTWARE_RELEASE_DATE, "url": SOFTWARE_URL,
         "repository-code": REPOSITORY, "license": "MIT",
     }.items():
         require(document.get(key) == expected, "Software citation mismatch: " + key)
@@ -120,7 +121,7 @@ def validate_cff(document, schema):
     for key, expected in {
         "type": "article", "title": ARTICLE_TITLE,
         "authors": [{"name": "AnimaFoundry"}], "version": ARTICLE_VERSION,
-        "year": 2026, "date-released": RELEASE_DATE, "status": "preprint",
+        "year": 2026, "date-released": ARTICLE_RELEASE_DATE, "status": "preprint",
         "license": "CC-BY-4.0", "url": ARTICLE_URL, "notes": ARTICLE_NOTE,
     }.items():
         require(article.get(key) == expected, "Article citation mismatch: " + key)
@@ -140,7 +141,8 @@ def expected_csl():
                    "original_controlled_model_experiments": False,
                    "power_analysis_performed": False,
                    "defense_effectiveness_evaluated": False,
-                   "publication_software_version": SOFTWARE_VERSION},
+                   "publication_software_version": SOFTWARE_VERSION,
+                   "publication_software_date_released": SOFTWARE_RELEASE_DATE},
     }]
 
 
@@ -182,6 +184,8 @@ def verify(root=ROOT):
             "Manuscript must identify its preprint status near its title")
     return {"cff_schema": "1.2.0", "cff_schema_sha256": SCHEMA_SHA256,
             "software_version": SOFTWARE_VERSION, "article_version": ARTICLE_VERSION,
+            "software_release_date": SOFTWARE_RELEASE_DATE,
+            "article_release_date": ARTICLE_RELEASE_DATE,
             "article_status": "preprint", "citation_exports": 3,
             "scientific_claim_validation": False}
 

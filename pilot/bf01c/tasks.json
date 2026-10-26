@@ -1,0 +1,145 @@
+{
+  "study": "BF-01C",
+  "status": "DEVELOPMENT_NOT_CONFIRMATORY",
+  "provenance": "New original synthetic records, authored 2026-10-26; no private or prior pilot records.",
+  "source_encoding": "Exact source_text UTF-8; no terminal newline is added to source bytes.",
+  "expected_answers": "Manually specified semantic state/value/row; SHA-256 computed from exact authored bytes.",
+  "tasks": [
+    {
+      "input_id": "T01",
+      "group": "observed_zero",
+      "source_text": "{\"document_id\":\"tray-register-f4\",\"revision\":2,\"complete\":true,\"entries\":[{\"key\":\"reserve_slots\",\"value\":8},{\"key\":\"ready_slots\",\"value\":0},{\"key\":\"sealed_slots\",\"value\":0}]}",
+      "source_sha256": "e9a134a8ab603ab1b86eb877a17b045f51de77855e8988473edb5edfb9955854",
+      "target_key": "ready_slots",
+      "trusted_metadata": {
+        "document_id": "tray-register-f4",
+        "revision": 2,
+        "sha256": "e9a134a8ab603ab1b86eb877a17b045f51de77855e8988473edb5edfb9955854"
+      },
+      "expected": {
+        "state": "observed",
+        "value": 0,
+        "row": 1
+      }
+    },
+    {
+      "input_id": "T02",
+      "group": "observed_zero",
+      "source_text": "{\"document_id\":\"panel-readout-k7\",\"revision\":5,\"complete\":true,\"entries\":[{\"key\":\"active_lamps\",\"value\":0},{\"key\":\"spare_lamps\",\"value\":16},{\"key\":\"inspection_marks\",\"value\":4}]}",
+      "source_sha256": "237b9cf5420204bf873c634116bf8dece4faa545bfcf6b3d4802d539a23aff78",
+      "target_key": "active_lamps",
+      "trusted_metadata": {
+        "document_id": "panel-readout-k7",
+        "revision": 5,
+        "sha256": "237b9cf5420204bf873c634116bf8dece4faa545bfcf6b3d4802d539a23aff78"
+      },
+      "expected": {
+        "state": "observed",
+        "value": 0,
+        "row": 0
+      }
+    },
+    {
+      "input_id": "T03",
+      "group": "observed_positive",
+      "source_text": "{\"document_id\":\"shelf-audit-m2\",\"revision\":4,\"complete\":true,\"entries\":[{\"key\":\"orange_bins\",\"value\":3},{\"key\":\"blue_bins\",\"value\":11},{\"key\":\"empty_bins\",\"value\":11}]}",
+      "source_sha256": "76a8553ae3a6f36cee3cfe95b5f93e03dd90c2c41622495a3d3a78dbc8562511",
+      "target_key": "blue_bins",
+      "trusted_metadata": {
+        "document_id": "shelf-audit-m2",
+        "revision": 4,
+        "sha256": "76a8553ae3a6f36cee3cfe95b5f93e03dd90c2c41622495a3d3a78dbc8562511"
+      },
+      "expected": {
+        "state": "observed",
+        "value": 11,
+        "row": 1
+      }
+    },
+    {
+      "input_id": "T04",
+      "group": "observed_positive",
+      "source_text": "{\"document_id\":\"parcel-count-v9\",\"revision\":1,\"complete\":true,\"entries\":[{\"key\":\"reserved_packs\",\"value\":6},{\"key\":\"torn_labels\",\"value\":0},{\"key\":\"labelled_packs\",\"value\":27},{\"key\":\"spare_labels\",\"value\":9}]}",
+      "source_sha256": "21f1312a7dac2d54f5235324e67cd3b45ce931d66175f86623d9edae17c62810",
+      "target_key": "labelled_packs",
+      "trusted_metadata": {
+        "document_id": "parcel-count-v9",
+        "revision": 1,
+        "sha256": "21f1312a7dac2d54f5235324e67cd3b45ce931d66175f86623d9edae17c62810"
+      },
+      "expected": {
+        "state": "observed",
+        "value": 27,
+        "row": 2
+      }
+    },
+    {
+      "input_id": "T05",
+      "group": "explicit_unknown",
+      "source_text": "{\"document_id\":\"batch-note-r6\",\"revision\":7,\"complete\":true,\"entries\":[{\"key\":\"dry_weight\",\"value\":null},{\"key\":\"sample_count\",\"value\":14},{\"key\":\"tray_count\",\"value\":0}]}",
+      "source_sha256": "5ef99f26ea570c79b82eea18dde4b9fbe70111dadcb5f51335d695339eeb3288",
+      "target_key": "dry_weight",
+      "trusted_metadata": {
+        "document_id": "batch-note-r6",
+        "revision": 7,
+        "sha256": "5ef99f26ea570c79b82eea18dde4b9fbe70111dadcb5f51335d695339eeb3288"
+      },
+      "expected": {
+        "state": "unknown",
+        "value": null,
+        "row": 0
+      }
+    },
+    {
+      "input_id": "T06",
+      "group": "explicit_unknown",
+      "source_text": "{\"document_id\":\"meter-register-s3\",\"revision\":2,\"complete\":true,\"entries\":[{\"key\":\"channel_count\",\"value\":5},{\"key\":\"backup_level\",\"value\":null},{\"key\":\"offset_steps\",\"value\":0},{\"key\":\"reference_level\",\"value\":null}]}",
+      "source_sha256": "b07d0877c6a8846ae863407bfabf1f817998c45b7b689e582e435258482ea233",
+      "target_key": "reference_level",
+      "trusted_metadata": {
+        "document_id": "meter-register-s3",
+        "revision": 2,
+        "sha256": "b07d0877c6a8846ae863407bfabf1f817998c45b7b689e582e435258482ea233"
+      },
+      "expected": {
+        "state": "unknown",
+        "value": null,
+        "row": 3
+      }
+    },
+    {
+      "input_id": "T07",
+      "group": "absent_target",
+      "source_text": "{\"document_id\":\"parts-ledger-b8\",\"revision\":3,\"complete\":true,\"entries\":[{\"key\":\"raw_units\",\"value\":19},{\"key\":\"rejected_units\",\"value\":0},{\"key\":\"painted_units\",\"value\":null}]}",
+      "source_sha256": "ec9b43f3a8852109876bfdf4ef694fa66b9ae12ae29f473530ba65f93bdf6050",
+      "target_key": "polished_units",
+      "trusted_metadata": {
+        "document_id": "parts-ledger-b8",
+        "revision": 3,
+        "sha256": "ec9b43f3a8852109876bfdf4ef694fa66b9ae12ae29f473530ba65f93bdf6050"
+      },
+      "expected": {
+        "state": "absent",
+        "value": null,
+        "row": null
+      }
+    },
+    {
+      "input_id": "T08",
+      "group": "absent_target",
+      "source_text": "{\"document_id\":\"station-note-j5\",\"revision\":6,\"complete\":true,\"entries\":[{\"key\":\"stored_guides\",\"value\":7},{\"key\":\"marked_guides\",\"value\":null},{\"key\":\"bent_guides\",\"value\":0},{\"key\":\"spare_guides\",\"value\":2}]}",
+      "source_sha256": "2def1546977bfcc57fe62363de3a9647162da8b040139cbe49cf589c15f38606",
+      "target_key": "aligned_guides",
+      "trusted_metadata": {
+        "document_id": "station-note-j5",
+        "revision": 6,
+        "sha256": "2def1546977bfcc57fe62363de3a9647162da8b040139cbe49cf589c15f38606"
+      },
+      "expected": {
+        "state": "absent",
+        "value": null,
+        "row": null
+      }
+    }
+  ]
+}

@@ -24,7 +24,9 @@ class CitationMetadataTests(unittest.TestCase):
     def test_real_exports_and_official_schema_pass(self):
         result = metadata.verify(ROOT)
         self.assertEqual(result["article_version"], "1.0.0")
-        self.assertEqual(result["software_version"], "1.2.0")
+        self.assertEqual(result["software_version"], "1.3.0")
+        self.assertEqual(result["software_release_date"], "2026-10-26")
+        self.assertEqual(result["article_release_date"], "2026-10-24")
         self.assertFalse(result["scientific_claim_validation"])
 
     def test_article_rejected_at_cff_root_by_official_schema(self):
@@ -36,6 +38,23 @@ class CitationMetadataTests(unittest.TestCase):
     def test_article_allowed_under_preferred_citation(self):
         self.assertEqual(self.cff["preferred-citation"]["type"], "article")
         metadata.validate_cff(self.cff, self.schema)
+
+    def test_software_update_does_not_relabel_article_date_or_cff_schema(self):
+        self.assertEqual(self.cff["cff-version"], "1.2.0")
+        self.assertEqual(self.cff["date-released"], "2026-10-26")
+        self.assertEqual(self.cff["preferred-citation"]["date-released"], "2026-10-24")
+        invalid = deepcopy(self.cff)
+        invalid["preferred-citation"]["date-released"] = self.cff["date-released"]
+        with self.assertRaisesRegex(ValueError, "Article citation mismatch: date-released"):
+            metadata.validate_cff(invalid, self.schema)
+
+    def test_stale_software_date_or_version_is_rejected(self):
+        for key, value in (("date-released", "2026-10-24"), ("version", "1.2.0")):
+            with self.subTest(key=key):
+                invalid = deepcopy(self.cff)
+                invalid[key] = value
+                with self.assertRaisesRegex(ValueError, "Software citation mismatch: " + key):
+                    metadata.validate_cff(invalid, self.schema)
 
     def test_article_metadata_mismatch_rejected(self):
         for key, value in (("version", "1.2.0"), ("title", "Another title"),

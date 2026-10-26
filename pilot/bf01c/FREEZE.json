@@ -1,0 +1,136 @@
+{
+  "study_id": "BF01C",
+  "created_utc": "2026-10-26T04:01:41.770623+00:00",
+  "files": [
+    {
+      "path": "LICENSE-CODE",
+      "sha256": "0644b7ecec046510e754f10c2531e229d395a6ce1d35013ba76bbd80adf212d2",
+      "bytes": 1069
+    },
+    {
+      "path": "LICENSE-TEXT",
+      "sha256": "6dac255b5ac86c1ab76998594d5976eec94c70c7acce17e5294818aa5f22565c",
+      "bytes": 18616
+    },
+    {
+      "path": "MODEL-LICENSE.txt",
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "bytes": 11343
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "ea331728a3f4145bba582d3a307c8f644ea1293e5d0717f37fe2e5d065c9a684",
+      "bytes": 8269
+    },
+    {
+      "path": "PRE_RUN_REVIEW.md",
+      "sha256": "0711caa8320847d5da7ede6f21918c77e87f34ec98010caf4cadc1b057482200",
+      "bytes": 4846
+    },
+    {
+      "path": "config.json",
+      "sha256": "a6303c31db58306b52678380c809e65365d1c3999f6f44bf63071205ea753fa8",
+      "bytes": 1057
+    },
+    {
+      "path": "contracts.py",
+      "sha256": "e9ef01da99f00743c56e7cbb65420780e56bc46e05142e7b1a88fdbf8725903a",
+      "bytes": 8246
+    },
+    {
+      "path": "envelope.py",
+      "sha256": "0779f9cfd3bd7b1c3787d1375d4e3237922b9fa88d01405306e8f01563260d51",
+      "bytes": 4910
+    },
+    {
+      "path": "evidence_gate.py",
+      "sha256": "19c670b387ae401b01b44edecf1f327a4532b5deca938b84949d879342194f15",
+      "bytes": 10178
+    },
+    {
+      "path": "fixtures.json",
+      "sha256": "c25bbcea13971390fc07364212cf5d27014b75fbc0167834beaca474191070c5",
+      "bytes": 185061
+    },
+    {
+      "path": "freeze.py",
+      "sha256": "d811a2f1e39dc36513fd891c4498a28982381776d4e3043241662ee2c3464b4e",
+      "bytes": 2771
+    },
+    {
+      "path": "model-template.txt",
+      "sha256": "eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+      "bytes": 1482
+    },
+    {
+      "path": "prepare_study.py",
+      "sha256": "0d8b5e5b25ba121db17662ccdae60082363a9114ef64fe0332096ff1182858ab",
+      "bytes": 6856
+    },
+    {
+      "path": "requests.json",
+      "sha256": "742b656a252a2447a6df630ce169c6bf4df1e913e6789862620d679b29383028",
+      "bytes": 136939
+    },
+    {
+      "path": "run_local.py",
+      "sha256": "f7d0dec5652bcdd2b2a3795af11d86c5326479292e0208985535222ce96d2fc1",
+      "bytes": 19287
+    },
+    {
+      "path": "schema_evidence.json",
+      "sha256": "8d9175051bc9d87b3b69333a203995e189f1a8b84f8b13871f0f0c5914fe108e",
+      "bytes": 1856
+    },
+    {
+      "path": "schema_no_evidence.json",
+      "sha256": "3e6459a270e7a3a78b988ec5bfab89c02f7efdc54966affff3965c8730db4ab3",
+      "bytes": 919
+    },
+    {
+      "path": "score.py",
+      "sha256": "144dccea786d58aa17f194cac2a6edbdc4f044b782594bc0ae703d2649edafcc",
+      "bytes": 18229
+    },
+    {
+      "path": "tasks.json",
+      "sha256": "dcca05abff0d39567348c29ab6b4de679bd6dba0009e54ac968254b35150f2a9",
+      "bytes": 6205
+    },
+    {
+      "path": "test_contracts.py",
+      "sha256": "e126a6074d2e70fd98d087e664153b269c0571207380f52e1a6a2edb60f011bd",
+      "bytes": 20005
+    },
+    {
+      "path": "test_deadline.py",
+      "sha256": "6c72db3fabdec0e1ddeaff19c7cf4caa237749052489bb954c01197fc5544aad",
+      "bytes": 3888
+    },
+    {
+      "path": "test_evidence_gate.py",
+      "sha256": "296af761ae700d97f76a06168c78d49d0c93944c2b04dc5f01b8eb004800c1e7",
+      "bytes": 6115
+    },
+    {
+      "path": "test_runtime.py",
+      "sha256": "c388cd724bda1f3c82da306732f504fde951d805e5a262fce134cd40e0ce6d8c",
+      "bytes": 25661
+    },
+    {
+      "path": "test_saved.py",
+      "sha256": "1afd8f081f61ebbb828c22857f4d1532aabee1b21a558e344cad4854d15d6a7e",
+      "bytes": 13530
+    },
+    {
+      "path": "test_score.py",
+      "sha256": "852932b190189f0c6de649fee3cf2b5f1454b8f6c6d2c165da4563aab82ad7a4",
+      "bytes": 15976
+    },
+    {
+      "path": "verify_saved.py",
+      "sha256": "b81d376ca7cebb331219dc323e6b38f6864517c2880a6d4540f1d26af136a044",
+      "bytes": 14576
+    }
+  ]
+}
